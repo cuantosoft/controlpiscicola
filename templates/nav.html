@@ -4,14 +4,14 @@
         <!--enlaces version pantalla grande-->
         <ul class="right hide-on-med-and-down">
 
-            <li><a href="#">Cultivos</a></li>
-            <li><a href="#">Estanques</a></li>
+            <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
+            <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
         </ul>
         <!-- enlaces de la version móvil-->
         <ul id="nav-mobile" class="sidenav">
             <div class="orange-text text-accent-2 blue darken-4 center">Opciones</div>
-            <li><a href="#">Cultivos</a></li>
-            <li><a href="#">Estanques</a></li>
+            <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
+            <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
         </ul>
 
 
