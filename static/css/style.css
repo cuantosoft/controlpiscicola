@@ -1,0 +1,22 @@
+.prueba{
+    color: #8b1014 !important;
+    background-color: #ff8f00 !important;
+    border: #8b1014 solid 2px !important;
+    margin: 5px !important;
+    padding: 10px !important;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+    flex: 1 0 auto;
+}

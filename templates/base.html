@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'css/materialize.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="{% static 'css/mystyle.css' %}" type="text/css" rel="stylesheet"/>
+    <title>
+       Control Piscícola |
+        {% block title %}
+            Inicio
+        {% endblock %}
+    </title>
+</head>
+<body>
+<!-- Mostrar usuario  -->
+{% if user.is_authenticated %}
+    <!-- barra de navegación  -->
+    {% include 'nav.html' %}
+{% else %}
+    {% include 'navinicio.html' %}
+{% endif %}
+
+
+
+<!-- mi caja -->
+<main>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <!-- titulo de sección  -->
+            <h3>
+                {% block h2 %}
+                    Bienvenido
+                {% endblock %}
+            </h3>
+            <!-- contenido principal  -->
+            <div class="micontenido">
+                {% block micontenido %}
+                    <h5>Aplicación para Manejo de registros Piscícolas</h5>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</main>
+
+{#<div class="prueba">#}
+{#    <p>prueba css</p>#}
+{#</div>#}
+<!--  Footer-->
+{% include 'footer.html' %}
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="{% static 'js/materialize.min.js' %}"></script>
+<script src="{% static 'js/init.js' %}"></script>
+
+</body>
+</html>

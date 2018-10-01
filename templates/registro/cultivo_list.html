@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block h2 %}
+    {{ titulo }}
+{% endblock %}
+
+{% block micontenido %}
+    {% if cultivos %}
+        <p>numero de cultivos: {{ cultivos|length }}</p>
+        <div class="row">
+        {% for cultivo in cultivos %}
+            <ul>
+                <li>
+                    <div class="col s12 m6">
+                        <div class="card blue-grey darken-1">
+                            <div class="card-content white-text">
+                                <span class="card-title">{{ cultivo.nombre }}</span>
+                                <p>{{ cultivo.detalle }}</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="#">Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    </li>
+            </ul>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No se han registrado cultivos</p>
+    {% endif %}
+
+{% endblock %}
