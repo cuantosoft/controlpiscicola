@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Ingresar
+{% endblock %}
+
+{% block h2 %}
+    Ingresar
+{% endblock %}
+
+{% block micontenido %}
+<div class="row">
+        <div class="col s12 m8">
+            <div class="card ">
+                <div class="card-content ">
+                    <span class="card-title">Iniciar sesión</span>
+                    <form class="crecer" id="ingresar" method="POST">
+                        {% csrf_token %}
+                        <!-- en ves de usar .as_p puedo usar |crispy un tag de crispy-->
+                        {{ form.as_p}}
+                    </form>
+                    <br>
+                    <button class="btn waves-light waves-effect light-blue lighten-1" type="submit" form="ingresar">Ingresar</button>
+                </div>
+{#                <div class="card-action">#}
+{#                    #}
+{#                </div>#}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

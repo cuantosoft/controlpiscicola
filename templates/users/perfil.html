@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Mi perfil
+{% endblock %}
+
+{% block h2 %}
+    Mi perfil
+{% endblock %}
+
+{% block micontenido %}
+    <h5>{{ user.username }}</h5>
+
+    <p>cargo: {{ user.groups.all.0 }}</p>
+    <p>email: </p>{{ user.email }}
+
+    {% ifequal user.groups.all.0.name "Jefe" %}
+    {% else %}
+        <p>Ultima conexión: {{ user.last_login }}</p>
+    {% endifequal %}
+
+{% endblock %}

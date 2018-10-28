@@ -1,21 +1,34 @@
-<nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="flow-text">Control Pisícola</a>
-    <span class="right ">| <strong> {{ user.username }}</strong></span>
-        <!--enlaces version pantalla grande-->
-        <ul class="right hide-on-med-and-down">
-
-            <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
-            <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
-        </ul>
-        <!-- enlaces de la version móvil-->
-        <ul id="nav-mobile" class="sidenav">
-            <div class="orange-text text-accent-2 blue darken-4 center">Opciones</div>
-            <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
-            <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
-        </ul>
-
-
-
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-</nav>
+{#{% load static %}#}
+{#<nav class="light-blue lighten-1" role="navigation">#}
+{#    <div class="nav-wrapper container">#}
+{#        <a id="logo-container" href="{% url 'la_piscicola' %}" class="brand-logo flow-text">#}
+{#            <i class="right hide-on-med-and-down"><img class="ajuste"#}
+{#                                                       src="{% static 'img/control-piscicolaw.png' %}"></i>#}
+{#            <span class="robotocondensed flow-text valign-wrapper">Control Piscícola</span>#}
+{#        </a>#}
+{#        <span class="right hide-on-med-and-down">| <strong> {{ user.username }}</strong></span>#}
+{#        <!--enlaces version pantalla grande-->#}
+{##}
+{#        {% if la_piscicola %}#}
+{#            <ul class="right hide-on-med-and-down">#}
+{#                <li><a href="{% url 'cultivo_list' la_piscicola.id %}">Cultivos</a></li>#}
+{#                <li><a href="{% url 'estanque_list' la_piscicola.id %}">Estanques</a></li>#}
+{#                <li><a href="{% url 'salir' %}">salir</a></li>#}
+{#            </ul>#}
+{#            <!-- enlaces de la version móvil-->#}
+{#            <ul id="nav-mobile" class="sidenav">#}
+{#                <div class="orange-text text-accent-2 blue darken-4 center">Opciones</div>#}
+{#                <li><a href="{% url 'cultivo_list' la_piscicola.id %}">Cultivos</a></li>#}
+{#                <li><a href="{% url 'estanque_list' la_piscicola.id %}">Estanques</a></li>#}
+{#                <li><a href="{% url 'salir' %}">salir</a></li>#}
+{#            </ul>#}
+{#        {% else %}#}
+{#            <span class="right "><strong>no posee finca </strong></span>#}
+{#        {% endif %}#}
+{##}
+{##}
+{##}
+{##}
+{#        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>#}
+{#    </div>#}
+{#</nav>#}

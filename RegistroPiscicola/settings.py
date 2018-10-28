@@ -26,7 +26,8 @@ SECRET_KEY = 'v$-z-h1!ut^=pdm%+jc_ipgm#z_#5jy)b3i!!)m$^)nixb4=z4'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+# comandos
+# manage.py changepassword <user_name>
 
 # Application definition
 
@@ -38,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'registro',
+    'pagina',
+    'users.apps.UsersConfig',
+    'crispy_forms',
 ]
+# probando custom user
+# AUTH_USER_MODEL = 'pagina.Usuario'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -105,7 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 
 TIME_ZONE = 'UTC'
 
@@ -123,3 +129,12 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+
+# no me encuentra los staticfiles probemos esto
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+LOGIN_REDIRECT_URL = 'la_piscicola'
+LOGIN_URL = 'inicio'

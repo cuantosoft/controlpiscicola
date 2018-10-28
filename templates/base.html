@@ -1,34 +1,27 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-
-    <!-- CSS  -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="{% static 'css/materialize.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="{% static 'css/mystyle.css' %}" type="text/css" rel="stylesheet"/>
+    {% include 'config.html' %}
+    <!-- favicon -->
+    <link rel="icon" href="{% static 'img/control-piscicola.png' %}"/>
+    <!-- titulo pestaña -->
     <title>
-       Control Piscícola |
+        Control Piscícola |
         {% block title %}
             Inicio
         {% endblock %}
     </title>
 </head>
+
 <body>
-<!-- Mostrar usuario  -->
-{% if user.is_authenticated %}
-    <!-- barra de navegación  -->
-    {% include 'nav.html' %}
-{% else %}
-    {% include 'navinicio.html' %}
-{% endif %}
+<header>
+        <!-- barra de navegación  -->
+        {% include 'navinicio.html' %}
+</header>
 
-
-
-<!-- mi caja -->
+<!-- contnido principal -->
 <main>
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
@@ -38,10 +31,17 @@
                     Bienvenido
                 {% endblock %}
             </h3>
-            <!-- contenido principal  -->
+            <!-- contenido principal center-align valign-wrapper-->
             <div class="micontenido">
                 {% block micontenido %}
+                    {#                    <img class="responsive-img right-align centrar max" src="{% static 'img/control-piscicola.png' %}">#}
                     <h5>Aplicación para Manejo de registros Piscícolas</h5>
+                    <!-- errores del view registrar-->
+                    {% if messages %}
+                        {% for mensaje in messages %}
+                            {{ mensaje.tag }}{{ mensaje }}
+                        {% endfor %}
+                    {% endif %}
                 {% endblock %}
             </div>
         </div>
@@ -54,11 +54,16 @@
 <!--  Footer-->
 {% include 'footer.html' %}
 
-
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="{% static 'js/materialize.min.js' %}"></script>
 <script src="{% static 'js/init.js' %}"></script>
 
+<!-- probando modal materialize -->
+<script>
+    $(document).ready(function () {
+        $('.modal').modal();
+    });
+</script>
 </body>
 </html>

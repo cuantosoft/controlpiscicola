@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+   página de errores
+{% endblock %}
+
+{% block h2 %}
+    algo ha salido mal :(
+{% endblock %}
+
+{% block micontenido %}
+    {% if error %}
+        {{ error }}
+    {% else %}
+        consulta al administrador
+    {% endif %}
+
+{% endblock %}
