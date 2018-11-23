@@ -1,5 +1,5 @@
 {% load static %}
-<nav class="light-blue lighten-1" role="navigation">
+<nav class="light-blue" role="navigation">
     <div class="nav-wrapper container">
 
         {% if user.is_authenticated %}
@@ -8,11 +8,15 @@
             <span class="robotocondensed flow-text valign-wrapper">Control Piscícola</span>
         </a>
 
-        {% if la_piscicola %}
+
             <!--enlaces version pantalla grande-->
             <ul class="right hide-on-med-and-down">
-                <li><a href="{% url 'cultivo_list' la_piscicola.id %}">Cultivos</a></li>
-                <li><a href="{% url 'estanque_list' la_piscicola.id %}">Estanques</a></li>
+            {% if la_piscicola %}
+                <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
+                <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
+            {% else %}
+
+            {% endif %}
                 <li><a href="{% url 'salir' %}">salir</a></li>
 
                 <li ><a class="blue-text text-darken-4" href="{% url 'perfil' %}">{{ user.username }}</a></li>
@@ -21,14 +25,15 @@
             <!-- enlaces de la version móvil-->
             <ul id="nav-mobile" class="sidenav">
                 <div class="orange-text text-accent-2 blue darken-4 center">Opciones</div>
-                <li><a href="{% url 'cultivo_list' la_piscicola.id %}">Cultivos</a></li>
-                <li><a href="{% url 'estanque_list' la_piscicola.id %}">Estanques</a></li>
+            {% if la_piscicola %}
+                <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
+                <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
+            {% else %}
+
+            {% endif %}
                 <li><a href="{% url 'salir' %}">salir</a></li>
                 <li><a class="orange-text text-accent-2" href="{% url 'perfil' %}">{{ user.username }}</a></li>
             </ul>
-        {% else %}
-            <span class="right "><strong>no posee finca </strong></span>
-        {% endif %}
         {% else %}
             <a id="logo-container" href="{% url 'inicio' %}" class="brand-logo">
                 <i class="right hide-on-med-and-down"><img class="ajuste"

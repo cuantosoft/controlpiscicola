@@ -1,13 +1,13 @@
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 .icon-block {
   padding: 0 15px;
 }
-
 
 .icon-block .material-icons {
 	font-size: inherit;
 }
 body {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -18,7 +18,6 @@ main {
     flex: 1 0 auto;
 }
 p{
-    margin-top: .8em;
     margin-top: .8em;
 }
 footer[class*="page-footer"] {
@@ -52,9 +51,10 @@ h1, h2, h3, h4, h5, h6, .robotocondensed{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-logo-s{
-    font-size: 2rem !important;
-}
+/*logo-s{*/
+    /*font-size: 2rem !important;*/
+/*}*/
+/*tamaño del logo*/
 .ajuste{
     /*vertical-align: middle;*/
     max-width: 100%;
@@ -63,22 +63,45 @@ logo-s{
     margin: auto;
     /*display: block;*/
 }
-.brand-logo i{
-    margin-right: 5px !important;
-    margin-left: 5px !important;
-}
 
+/*acercando el logo*/
+.brand-logo i{
+    margin-right: 5px!important;
+    margin-left: 5px!important;
+}
+/*tratando de cuadrar input de subir imagenes*/
+/*.rompe-texto{*/
+    /*word-wrap: break-word;*/
+    /*word-break: break-all;*/
+    /*!*overflow: hidden;*!*/
+/*}*/
+/*reducir el input de subir imagenes*/
+#id_image{
+    font-size: 1rem;
+    max-width: 100%;
+}
+/*cuadrando inputs y labels*/
 input[id]{
-    font-size: 1.5rem !important;
-    height: 2.5rem !important;
+    font-size: 1.3rem ;
+    height: 2.3rem!important;
 }
 label[for]{
-    font-size: 1rem !important;
-}
-html{
-    font-size: 16px !important;
+    color: #0d47a1;
+    font-size: 1.1rem!important;
 }
 
+
+/* colorear errores del form*/
 ul[class="errorlist"]{
     color: #8b1014;
+}
+
+@media only screen and (max-width: 600px) {
+    /*fontsize general*/
+    html{
+        font-size: 16px!important;
+    }
+}
+.row{
+    margin: 0!important;
 }

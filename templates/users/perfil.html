@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-
+{% load static %}
 {% block title %}
     Mi perfil
 {% endblock %}
@@ -10,14 +10,44 @@
 {% endblock %}
 
 {% block micontenido %}
-    <h5>{{ user.username }}</h5>
-
-    <p>cargo: {{ user.groups.all.0 }}</p>
-    <p>email: </p>{{ user.email }}
-
-    {% ifequal user.groups.all.0.name "Jefe" %}
+    {% if la_piscicola %}
+        <h4>{{ la_piscicola.razon_social }}</h4>
     {% else %}
-        <p>Ultima conexión: {{ user.last_login }}</p>
-    {% endifequal %}
+        No has configurado una finca, comunícate con el administrador
+    {% endif %}
+    <div class="section" >
+        <i class="left"><img class="responsive-img circle small" src="{{ user.profile.image.url }}" height="80" width="80"></i>
+        <h5 class="valign-wrapper">{{ user.username }}</h5>
+    </div>
+
+        <p>nombre: {{ user.firstname }}</p>
+        <p>apellidos: {{ user.lastname}}</p>
+        <p>cargo: {{ user.groups.all.0 }}</p>
+        <p>email: </p>{{ user.email }}
+
+        {% ifequal user.groups.all.0.name "Jefe" %}
+        {% else %}
+            <p>Ultima conexión: {{ user.last_login }}</p>
+        {% endifequal %}
+    <br>
+{#    <div class="row">#}
+{#        <div class="col s12 m6 l6">#}
+{#            <div class="card">#}
+{#                <div class="card-content">#}
+{#                    <span class="card-title">Información</span>#}
+{#                    <form method="post" enctype="multipart/form-data">#}
+{#                        {% csrf_token %}#}
+{#                        {{ u_form.as_p }}#}
+{#                        <div class="ningun">#}
+{#                            {{ p_form.as_p }}#}
+{#                        </div>#}
+{##}
+{#                        <button class="btn light-blue" type="submit">actualizar</button>#}
+{#                    </form>#}
+{#                </div>#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
 {% endblock %}

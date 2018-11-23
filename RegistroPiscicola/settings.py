@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'RegistroPiscicola.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3_prueba'),
     }
 }
 
@@ -125,16 +125,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
+# esto es para producción
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-MEDIA_URL = '/uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-# no me encuentra los staticfiles probemos esto
+# no me encuentra los staticfiles probemos esto (esto es para desarrollo)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'la_piscicola'
-LOGIN_URL = 'inicio'
+LOGIN_URL = 'ingresar'

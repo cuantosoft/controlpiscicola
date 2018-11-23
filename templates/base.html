@@ -42,6 +42,9 @@
                             {{ mensaje.tag }}{{ mensaje }}
                         {% endfor %}
                     {% endif %}
+                    {% if mensaje %}
+                        <p>{{ mensaje }}</p>
+                    {% endif %}
                 {% endblock %}
             </div>
         </div>
