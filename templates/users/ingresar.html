@@ -5,16 +5,16 @@
     Ingresar
 {% endblock %}
 
-{% block h2 %}
+{% block main_title %}
     Ingresar
 {% endblock %}
 
 {% block micontenido %}
 <div class="row">
-        <div class="col s12 m8">
-            <div class="card ">
+        <div class="col s12 m6 offset-m3 valign">
+            <div class="card">
                 <div class="card-content ">
-                    <span class="card-title">Iniciar sesión</span>
+                    <span class="card-title"></span>
                     <form class="crecer" id="ingresar" method="POST">
                         {% csrf_token %}
                         <!-- en ves de usar .as_p puedo usar |crispy un tag de crispy-->

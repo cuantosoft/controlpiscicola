@@ -1,10 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
+    {% include 'retroceso.html' %}
+{% endblock %}
+
+{% block main_title %}
+    Calidad agua estanque: {{ estanque.nombre }}
+{% endblock %}
+
+{% block micontenido %}
+    <div class="row">
+        <a href="{% url 'control:calidad_agua_registrar' estanque.id %}"
+           class="btn btn-large btn-flat waves-effect waves-light right">
+            <i class="material-icons right">add</i>
+            registrar calidad agua
+        </a>
+        <a href="{% url 'control:graficas_agua' estanque.id %}"
+           class="btn btn-large btn-flat waves-effect waves-light right">
+            <i class="material-icons right">insert_chart</i>
+            gráficas calidad agua
+        </a>
+    </div>
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <table class="striped">
+                <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>oxigeno</th>
+                    <th>temperatura</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for caliagua in caliagua_list %}
+                    <tr>
+                        <td><a href="{% url 'control:calidad_agua_detalle' estanque.id caliagua.id %}">{{ caliagua.fecha_registro }}</a></td>
+                        <td>{{ caliagua.oxigeno }}</td>
+                        <td>{{ caliagua.temperatura }}</td>
+                        <td><a href="{% url 'control:calidad_agua_editar' estanque.id caliagua.id %}"
+                               class="btn btn-small btn-flat waves-effect waves-light right">
+                            editar
+                        </a></td>
+                    </tr>
+                {% empty %}
+                    <p class="center">No hay registros de calidad de agua</p>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

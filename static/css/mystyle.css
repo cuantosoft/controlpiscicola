@@ -1,19 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .icon-block {
   padding: 0 15px;
 }
-
 .icon-block .material-icons {
 	font-size: inherit;
 }
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    color: #323232;
-  }
-
+    color: #323232!important;
+}
 main {
     flex: 1 0 auto;
 }
@@ -23,20 +22,6 @@ p{
 footer[class*="page-footer"] {
     padding-top: 15px;
 }
-
-/*#logo-container::before{*/
-    /*background-color: #333;*/
-    /*background-position: 0 0;*/
-    /*background-repeat: no-repeat;*/
-    /*!*background: *!*/
-    /*height: 24px;*/
-    /*width: 24px;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*!*background-size: 200px;*!*/
-    /*content: url("/static/img/control-piscicola.png");;*/
-/*}*/
-
 .max{
     max-height: 200px;
     max-width: 200px;
@@ -46,14 +31,9 @@ footer[class*="page-footer"] {
     display: block;
     margin: auto;
 }
-
 h1, h2, h3, h4, h5, h6, .robotocondensed{
     font-family: 'Roboto Condensed', sans-serif;
 }
-
-/*logo-s{*/
-    /*font-size: 2rem !important;*/
-/*}*/
 /*tamaño del logo*/
 .ajuste{
     /*vertical-align: middle;*/
@@ -69,12 +49,6 @@ h1, h2, h3, h4, h5, h6, .robotocondensed{
     margin-right: 5px!important;
     margin-left: 5px!important;
 }
-/*tratando de cuadrar input de subir imagenes*/
-/*.rompe-texto{*/
-    /*word-wrap: break-word;*/
-    /*word-break: break-all;*/
-    /*!*overflow: hidden;*!*/
-/*}*/
 /*reducir el input de subir imagenes*/
 #id_image{
     font-size: 1rem;
@@ -82,11 +56,10 @@ h1, h2, h3, h4, h5, h6, .robotocondensed{
 }
 /*cuadrando inputs y labels*/
 input[id]{
-    font-size: 1.3rem ;
-    height: 2.3rem!important;
+
 }
 label[for]{
-    color: #0d47a1;
+    color: #424242;
     font-size: 1.1rem!important;
 }
 
@@ -99,9 +72,25 @@ ul[class="errorlist"]{
 @media only screen and (max-width: 600px) {
     /*fontsize general*/
     html{
-        font-size: 16px!important;
+        font-size: 17px!important;
     }
+    input[id]{
+    font-size: 20px!important;
+    height: 2.5rem!important;
 }
+}
+
+/* mejorando materialize*/
 .row{
     margin: 0!important;
+}
+.btn{
+    font-family: "Roboto Condensed", sans-serif;;
+}
+.btn:hover{
+    background:  #03a9f4;
+    color: #fff;
+}
+#mychart{
+    border: solid 2px black;
 }

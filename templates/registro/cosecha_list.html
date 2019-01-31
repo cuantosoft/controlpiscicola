@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block retroceso %}
+<a href="/piscicola" class="btn-floating btn-small waves-effect waves-light blue darken-4"><i class="material-icons">arrow_back</i></a>
+{% endblock %}
+
+{% block main_title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block micontenido %}
+
+    {% if cosechas %}
+        <div class="row center">
+            <span class="">total cosechas: {{ cosechas|length }}</span>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+            <table class="striped">
+                <thead>
+                <tr>
+                    <th>Nombre:</th>
+                    <th>fecha cosecha:</th>
+                    <th>total producción:</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for cosecha in cosechas %}
+                <tr>
+                    <td>{{ cosecha.nombre}}</td>
+                    <td>{{ cosecha.fecha_cosecha}}</td>
+                    <td></td>
+                </tr>
+                {% empty %}
+                    <p class="center">No se han registrado muestreos</p>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+
+    {% else %}
+        <p>No se han registrado cosechas</p>
+    {% endif %}
+
+{% endblock %}

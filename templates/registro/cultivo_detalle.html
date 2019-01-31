@@ -1,10 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
+{% include 'retroceso.html' %}
+{% endblock %}
+
+{% block main_title %}
+    Cultivo: {{ cultivo.nombre }}
+{% endblock %}
+
+{% block micontenido %}
+    <div class="row">
+        <div class="col s12 m8 offset-m3">
+            <a class="btn btn-flat btn-large right" href="{% url 'control:muestreo_listar' cultivo.id %}"><i class="material-icons right">insert_chart</i>Muestreo</a>
+            <a class="btn btn-flat btn-large right" href="{% url 'control:alimentacion_listar' cultivo.id %}"><i class="material-icons right">insert_chart</i>Alimentación</a>
+            <a class="btn btn-flat btn-large right" href="{% url 'control:mortalidad_registrar' cultivo.id %}"><i class="material-icons right">insert_chart</i>Mortalidad</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m8 offset-m3">
+            <table class="striped">
+                <thead>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>estanque:</td>
+                    <td>{{ cultivo.estanque }}</td>
+                </tr>
+                <tr>
+                    <td>especie:</td>
+                    <td>{{ cultivo.especie }}</td>
+                </tr>
+                <tr>
+                    <td>cantidad inicial:</td>
+                    <td>{{ cultivo.cantidad }}</td>
+                </tr>
+                 <tr>
+                    <td>total peces:</td>
+                    <td>{{ cultivo.total_peces }}</td>
+                </tr>
+                <tr>
+                    <td>tamaño pez (cm):</td>
+                    <td>{{ cultivo.tamaño_pez_cm }}</td>
+                </tr>
+                <tr>
+                    <td>peso pez (gr):</td>
+                    <td>{{ cultivo.peso_pez_gr }}</td>
+                </tr>
+                <tr>
+                    <td>densidad inicial (peces/m2):</td>
+                    <td>{{ densidad_inicial }}</td>
+                </tr>
+                <tr>
+                    <td>etapa:</td>
+                    <td>{{ cultivo.etapa }}</td>
+                </tr>
+                <tr>
+                    <td>responsable:</td>
+                    <td>{{ cultivo.responsable }}</td>
+                </tr>
+                <tr>
+                    <td>fecha registro:</td>
+                    <td>{{ cultivo.fecha_registro }}</td>
+                </tr>
+                <tr>
+                    <td>fecha modificado:</td>
+                    <td>{{ cultivo.fecha_update }}</td>
+                </tr>
+                <tr>
+                    <td>detalle:</td>
+                    <td>{{ cultivo.detalle }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-flat right" href="{% url 'cultivo_editar' cultivo.id%}">Editar</a>
+        </div>
+    </div>
+
+{% endblock %}

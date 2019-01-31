@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    gráficas-agua
+{% endblock %}
+
+{% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
+    {% include 'retroceso.html' %}
+{% endblock %}
+
+{% block main_title %}
+    Gráficas calidad agua estanque: {{ estanque.nombre }}
+{% endblock %}
+
+{% block micontenido %}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            {% if object_list is None %}
+                <p class="center">No hay registros de calidad de agua</p>
+            {% endif %}
+        </div>
+        <div class="row">
+            <div class="col s12 m8 offset-m2">
+                <canvas id="mychart2" width="400" height="300"></canvas>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+        <script>
+            new Chart(document.getElementById("mychart2"), {
+                "type": "line",
+                "data": {
+                    "labels": [{% for f in fechas %}"{{ f }}",{% endfor %}],
+                    "datasets": [{
+                        "label": "Niveles de oxígeno",
+                        "data": {{ oxigeno }},
+                        "fill": false,
+                        "borderColor": "rgb(75, 192, 192)",
+                        "lineTension": 0.1
+                    }]
+                }, "options": {}
+            });
+        </script>
+{% endblock %}

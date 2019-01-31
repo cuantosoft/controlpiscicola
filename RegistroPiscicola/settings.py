@@ -7,14 +7,12 @@ For more information on this file, see
 https://docs.djangoproject.com/en/2.1/topics/settings/
 
 For the full list of settings and their values, see
-https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
@@ -25,7 +23,7 @@ SECRET_KEY = 'v$-z-h1!ut^=pdm%+jc_ipgm#z_#5jy)b3i!!)m$^)nixb4=z4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 # comandos
 # manage.py changepassword <user_name>
 
@@ -38,10 +36,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registro',
-    'pagina',
+
+    # propio
+    'registro.apps.RegistroConfig',
+    'control.apps.ControlConfig',
     'users.apps.UsersConfig',
+
+    # terceros
     'crispy_forms',
+    'pagina',
+    'cuser',
+
 ]
 # probando custom user
 # AUTH_USER_MODEL = 'pagina.Usuario'
@@ -54,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'cuser.middleware.CuserMiddleware',
 ]
 
 ROOT_URLCONF = 'RegistroPiscicola.urls'
@@ -113,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'es'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Bogota'
 
 USE_I18N = True
 
@@ -135,7 +141,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

@@ -4,16 +4,19 @@
    Piscícola: {% if la_piscicola %}{{ la_piscicola.razon_social }} {% endif %}
 {% endblock %}
 
-{% block h2 %}
+{% block main_title %}
     Piscícola| {% if la_piscicola %}{{ la_piscicola.razon_social }} {% endif %}
 {% endblock %}
 
 {% block micontenido %}
-    {% if la_piscicola %}
-        <a href="{% url 'cultivo_list' %}">Mis Cultivos</a>
-        <a href="{% url 'estanque_list' %}">Mis Estanques</a>
-    {% else %}
-        <p>No has configurado tu finca, comunícate con el administrador</p>
-    {% endif %}
+    <div class="center">
+        {% if la_piscicola %}
+            <a href="{% url 'cultivo_list' %}">Mis Cultivos</a>
+            <a href="{% url 'estanque_list' %}">Mis Estanques</a>
+        {% else %}
+            <p>No has configurado tu finca, comunícate con el administrador</p>
+        {% endif %}
+    </div>
+
 
 {% endblock %}

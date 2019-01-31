@@ -1,10 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
+{% include 'retroceso.html' %}
+{% endblock %}
+
+{% block main_title %}
+    Ración: {{ alimentacion.dia }}
+{% endblock %}
+
+{% block micontenido %}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-large light-blue right" type="submit">registrar</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

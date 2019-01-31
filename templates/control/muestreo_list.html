@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ titulo }}
+{% endblock %}
+
+{% block main_title %}
+    Muestreos - Cultivo: {{ cultivo }}
+{% endblock %}
+
+{% block micontenido %}
+    <div class="row">
+        <div class="col s12 m8 offset-m3">
+            <a class="btn btn-flat btn-large right" href="#"><i class="material-icons right">add</i>Nuevo
+                muestreo</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <table class="striped">
+                <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>talla_promedio_cm</th>
+                    <th>Item Price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {% for muestreo in muestreo_list %}
+                <tr>
+                    <td>{{ muestreo.fecha_registro}}</td>
+                    <td>{{ muestreo.talla_promedio_cm}}</td>
+                    <td>{{ muestreo.peso_promedio_gr}}</td>
+                </tr>
+                {% empty %}
+                    <p class="center">No se han registrado muestreos</p>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

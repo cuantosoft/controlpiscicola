@@ -11,7 +11,6 @@ class Profile(models.Model):
     def __str__(self):
         return 'Perfil de {}'.format(self.user.username)
 
-    #
     # image = models.ImageField('imagen',default='/profile_pics/default.jpg', upload_to='profile_pics')
     #
     # def __str__(self):

@@ -16,45 +16,64 @@
 </head>
 
 <body>
+<!-- barra de navegación  -->
 <header>
-        <!-- barra de navegación  -->
-        {% include 'navinicio.html' %}
+    {% include 'navinicio.html' %}
 </header>
 
 <!-- contnido principal -->
 <main>
+
+
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <!-- titulo de sección  -->
-            <h3>
-                {% block h2 %}
-                    Bienvenido
-                {% endblock %}
-            </h3>
-            <!-- contenido principal center-align valign-wrapper-->
-            <div class="micontenido">
-                {% block micontenido %}
-                    {#                    <img class="responsive-img right-align centrar max" src="{% static 'img/control-piscicola.png' %}">#}
-                    <h5>Aplicación para Manejo de registros Piscícolas</h5>
-                    <!-- errores del view registrar-->
-                    {% if messages %}
-                        {% for mensaje in messages %}
-                            {{ mensaje.tag }}{{ mensaje }}
-                        {% endfor %}
-                    {% endif %}
-                    {% if mensaje %}
-                        <p>{{ mensaje }}</p>
-                    {% endif %}
-                {% endblock %}
+            <div class="center">
+
+                <h4><span class="left">{% block retroceso %}
+                    {% endblock %}</span>
+
+                    {% block main_title %}
+                        BIENVENIDO
+                    {% endblock %}
+                </h4>
             </div>
+            <!-- contenido principal center-align valign-wrapper-->
+            <section>
+                <div class="micontenido">
+                    {% block micontenido %}
+                        <div class="center">
+                            <h5>Aplicación para Manejo de registros Piscícolas</h5>
+                            <!-- errores del view registrar-->
+                            {% if messages %}
+                                {% for mensaje in messages %}
+                                    {{ mensaje.tag }}{{ mensaje }}
+                                {% endfor %}
+                            {% endif %}
+                            {% if mensaje %}
+                                <p>{{ mensaje }}</p>
+                            {% endif %}
+                        </div>
+
+                    {% endblock %}
+            </section>
         </div>
     </div>
+    </div>
+    {% if user.is_authenticated %}
+        {% if  user.profile.trabaja_en %}
+        {% else %}
+            <p class="center">Sr usuario, no tiene una finca configurada, consulte al administrador</p>
+        {% endif %}
+    {% endif %}
 </main>
 
 {#<div class="prueba">#}
 {#    <p>prueba css</p>#}
 {#</div>#}
+
 <!--  Footer-->
+<br>
 {% include 'footer.html' %}
 
 <!--  Scripts-->
@@ -62,11 +81,11 @@
 <script src="{% static 'js/materialize.min.js' %}"></script>
 <script src="{% static 'js/init.js' %}"></script>
 
-<!-- probando modal materialize -->
+
+
 <script>
-    $(document).ready(function () {
-        $('.modal').modal();
-    });
+    M.AutoInit();
 </script>
+
 </body>
 </html>

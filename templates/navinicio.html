@@ -3,38 +3,40 @@
     <div class="nav-wrapper container">
 
         {% if user.is_authenticated %}
-            <a id="logo-container" href="{% url 'la_piscicola' %}" class="brand-logo flow-text">
-            <i class="right hide-on-med-and-down"><img class="ajuste" src="{% static 'img/control-piscicolaw.png' %}"></i>
-            <span class="robotocondensed flow-text valign-wrapper">Control Piscícola</span>
-        </a>
 
+            <a id="logo-container" href="{% url 'la_piscicola' %}" class="brand-logo flow-text">
+                <i class="right hide-on-med-and-down"><img class="ajuste"
+                                                           src="{% static 'img/control-piscicolaw.png' %}"></i>
+                <span class="robotocondensed flow-text valign-wrapper">Control Piscícola</span>
+            </a>
 
             <!--enlaces version pantalla grande-->
             <ul class="right hide-on-med-and-down">
-            {% if la_piscicola %}
-                <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
-                <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
-            {% else %}
+                {% if user.profile.trabaja_en %}
+                    <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
+                    <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
+                {% else %}
 
-            {% endif %}
+                {% endif %}
                 <li><a href="{% url 'salir' %}">salir</a></li>
 
-                <li ><a class="blue-text text-darken-4" href="{% url 'perfil' %}">{{ user.username }}</a></li>
+                <li><a class="blue-text text-darken-4" href="{% url 'perfil' %}">{{ user.username }}</a></li>
             </ul>
-
             <!-- enlaces de la version móvil-->
             <ul id="nav-mobile" class="sidenav">
                 <div class="orange-text text-accent-2 blue darken-4 center">Opciones</div>
-            {% if la_piscicola %}
-                <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
-                <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
-            {% else %}
+                {% if user.profile.trabaja_en %}
+                    <li><a href="{% url 'cultivo_list' %}">Cultivos</a></li>
+                    <li><a href="{% url 'estanque_list' %}">Estanques</a></li>
+                {% else %}
 
-            {% endif %}
+                {% endif %}
                 <li><a href="{% url 'salir' %}">salir</a></li>
                 <li><a class="orange-text text-accent-2" href="{% url 'perfil' %}">{{ user.username }}</a></li>
             </ul>
+
         {% else %}
+
             <a id="logo-container" href="{% url 'inicio' %}" class="brand-logo">
                 <i class="right hide-on-med-and-down"><img class="ajuste"
                                                            src="{% static 'img/control-piscicolaw.png' %}"></i>
@@ -50,7 +52,9 @@
                 <div class="orange-text text-lighten-3 center">Opciones</div>
                 <li><a href="{% url 'ingresar' %}">Ingresar</a></li>
             </ul>
+
         {% endif %}
+
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
 </nav>
