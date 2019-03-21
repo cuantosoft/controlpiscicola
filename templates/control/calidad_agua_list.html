@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    {{ titulo }}
+    calidad agua
 {% endblock %}
 
 {% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
@@ -13,34 +13,60 @@
 {% endblock %}
 
 {% block micontenido %}
+
     <div class="row">
-        <a href="{% url 'control:calidad_agua_registrar' estanque.id %}"
-           class="btn btn-large btn-flat waves-effect waves-light right">
-            <i class="material-icons right">add</i>
-            registrar calidad agua
-        </a>
-        <a href="{% url 'control:graficas_agua' estanque.id %}"
-           class="btn btn-large btn-flat waves-effect waves-light right">
-            <i class="material-icons right">insert_chart</i>
-            gráficas calidad agua
-        </a>
+
+        <div class="col s12 m4">
+            <div class="col s12 m12">
+                <small class="italic">Filtro fecha</small>
+            </div>
+            <form class="" action="." method="post">
+                {% csrf_token %}
+                <div class="col s12 m6">
+                    <label for="desde">Desde</label>
+                    <input id="desde" name="desde" type="text" class="datepicker" id="datepicker_custom">
+                </div>
+                <div class="col s12 m6">
+                    <label for="hasta">Hasta</label>
+                    <input id="hasta" name="hasta" type="text" class="datepicker" id="datepicker_custom">
+                </div>
+                <input type="submit" class="btn btn-flat btn-small right" value="filtrar">
+            </form>
+        </div>
+        <div class="col s12 m8">
+            <a href="{% url 'control:calidad_agua_registrar' estanque.id %}"
+               class="btn btn-large btn-flat waves-effect waves-light right">
+                <i class="material-icons right">add</i>
+                registrar calidad agua
+            </a>
+            <a href="{% url 'control:graficas_agua' estanque.id %}"
+               class="btn btn-large btn-flat waves-effect waves-light right">
+                <i class="material-icons right">insert_chart</i>
+                gráficas calidad agua
+            </a>
+        </div>
     </div>
+
     <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m12 ">
             <table class="striped">
                 <thead>
                 <tr>
                     <th>Fecha</th>
                     <th>oxigeno</th>
                     <th>temperatura</th>
+                    <th>amonio</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for caliagua in caliagua_list %}
                     <tr>
-                        <td><a href="{% url 'control:calidad_agua_detalle' estanque.id caliagua.id %}">{{ caliagua.fecha_registro }}</a></td>
+                        <td>
+                            <a href="{% url 'control:calidad_agua_detalle' estanque.id caliagua.id %}">{{ caliagua.fecha_registro|date:"d M Y" }}</a>
+                        </td>
                         <td>{{ caliagua.oxigeno }}</td>
                         <td>{{ caliagua.temperatura }}</td>
+                        <td>{{ caliagua.amonio }}</td>
                         <td><a href="{% url 'control:calidad_agua_editar' estanque.id caliagua.id %}"
                                class="btn btn-small btn-flat waves-effect waves-light right">
                             editar
@@ -54,4 +80,31 @@
         </div>
     </div>
 
+
+
+{% endblock %}
+
+{% block custom_script %}
+    <script>
+        $(document).ready(function () {
+            $('.datepicker').datepicker({
+                format: 'dd/mm/yyyy',
+                i18n: {
+                    months: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                    weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                    weekdaysShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+                    weekdaysAbbrev: ['d', 'l', 'm', 'm', 'j', 'v', 's']
+                }
+            });
+
+        });
+    </script>
+    <script>
+        {% if messages %}
+            {% for message in messages %}
+                M.toast({html: '{{ message }}', classes: 'rounded'});
+            {% endfor %}
+        {% endif %}
+    </script>
 {% endblock %}

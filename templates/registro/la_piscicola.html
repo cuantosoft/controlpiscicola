@@ -5,16 +5,31 @@
 {% endblock %}
 
 {% block main_title %}
-    Piscícola| {% if la_piscicola %}{{ la_piscicola.razon_social }} {% endif %}
+    Piscícola: {% if la_piscicola %}{{ la_piscicola.razon_social }} {% endif %}
 {% endblock %}
 
 {% block micontenido %}
     <div class="center">
         {% if la_piscicola %}
-            <a href="{% url 'cultivo_list' %}">Mis Cultivos</a>
-            <a href="{% url 'estanque_list' %}">Mis Estanques</a>
+            <div class="row">
+            <div class="col s12 m4">
+                <a class="nowrap btn btn-flat btn-large full_ancho_m" href="{% url 'cultivo_list' %}">
+                    <span class="">Mis Cultivos</span>
+                </a>
+            </div>
+            <div class="col s12 m4">
+                <a class="nowrap btn btn-flat btn-large full_ancho_m" href="{% url 'estanque_list' %}">
+                    <span>Mis Estanques</span>
+                </a>
+            </div>
+            <div class="col s12 m4">
+                <a class="nowrap btn btn-flat btn-large full_ancho_m" href="{% url 'inventario:concentrado_list' %}">
+                    <span class="">Mi Concentrado</span>
+                </a>
+            </div>
+            </div>
         {% else %}
-            <p>No has configurado tu finca, comunícate con el administrador</p>
+            <p class="flow-text">No has configurado tu finca, comunícate con el administrador</p>
         {% endif %}
     </div>
 

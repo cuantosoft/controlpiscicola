@@ -23,7 +23,7 @@ SECRET_KEY = 'v$-z-h1!ut^=pdm%+jc_ipgm#z_#5jy)b3i!!)m$^)nixb4=z4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'jesusgil.pythonanywhere.com', '127.0.0.1']
 # comandos
 # manage.py changepassword <user_name>
 
@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'registro.apps.RegistroConfig',
     'control.apps.ControlConfig',
     'users.apps.UsersConfig',
-
+    'inventario.apps.InventarioConfig',
+    'pagina',
     # terceros
     'crispy_forms',
-    'pagina',
     'cuser',
 
 ]
@@ -113,7 +113,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
@@ -126,7 +125,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
@@ -141,7 +139,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
-
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'la_piscicola'

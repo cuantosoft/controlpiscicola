@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
+    {% include 'retroceso.html' %}
+{% endblock %}
+
+{% block main_title %}
+    Muestreo cultivo: {{ cultivo.nombre }}
+{% endblock %}
+
+{% block micontenido %}
+    <!-- Modal tabla AD-->
+    <div class="row">
+        <div class="center">
+            <small>Tabla alimentación ajuste dieta:</small>
+            <a class="waves-effect waves-light btn btn-flat btn-small modal-trigger" href="#modal1">Ver</a>
+        </div>
+    </div>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <img class="responsive-img" src="{% static 'img/tabla_alimentacion.png' %}"
+                 alt="tabla alimentación" style="max-width: 100%; height: auto">
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+            >Cerrar</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card">
+                <div class="card-content ">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <br>
+                        <div class="row">
+                            <button class="btn btn-large btn-flat waves-effect right" type="submit">
+                                <i class="material-icons right">create</i>
+                                registrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block custom_script %}
+    <script>
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
+{% endblock %}

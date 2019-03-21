@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    {{ titulo }}
+    estanque: {{ estanque.nombre }}
 {% endblock %}
 
 {% block retroceso %}
@@ -9,17 +9,20 @@
 {% endblock %}
 
 {% block main_title %}
-    Estanque: {{ estanque.nombre }}
+    <span class="margin-derecha">Estanque: {{ estanque.nombre }}</span>
 {% endblock %}
 
 {% block micontenido %}
     <div class="row">
         <div class="col s12 m8 offset-m3">
-            <a class="btn btn-flat btn-large right" href="{% url 'control:calidad_agua_listar' estanque.id %}"><i class="material-icons right">insert_chart</i>Calidad - agua</a>
+            <a class="btn btn-flat btn-large right waves-effect waves-light"
+               href="{% url 'control:calidad_agua_listar' estanque.id %}">
+                <i class="material-icons right">insert_chart</i>Calidad - agua</a>
         </div>
     </div>
+    <br>
     <div class="row">
-        <div class="col s12 m8 offset-m3">
+        <div class="col s12 m10 offset-m1">
             <table class="striped">
                 <thead>
                 </thead>
@@ -54,7 +57,11 @@
                 </tr>
                 </tbody>
             </table>
-            <a class="btn btn-flat right" href="{% url 'estanque_editar' estanque.id%}">Editar</a>
+            <br>
+            <a class="btn btn-large btn-flat waves-effect right" href="{% url 'estanque_editar' estanque.id%}">
+                <i class="material-icons right">create</i>
+                Editar
+            </a>
         </div>
     </div>
 {% endblock %}

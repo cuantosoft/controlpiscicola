@@ -14,11 +14,35 @@
 
 {% block micontenido %}
     <div class="row">
-        <div class="col s12 m8 offset-m2">
-                    <p>Fecha: {{ caliagua.fecha_registro }}</p>
-                    <p>oxigeno: {{ caliagua.oxigeno }}</p>
-                    <p>temperatura: {{ caliagua.temperatura }}</p>
+        <div class="col s12 m12">
+            <table class="striped highlight">
+                <thead>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Fecha:</td>
+                    <td>{{ caliagua.fecha_registro }}</td>
+                </tr>
+                <tr>
+                    <td>oxigeno: {</td>
+                    <td>{ caliagua.oxigeno }}</td>
+                </tr>
+                <tr>
+                    <td>temperatura: </td>
+                    <td>{{ caliagua.temperatura }}</td>
+                </tr>
+                <tr>
+                    <td>pH:</td>
+                    <td>{{ caliagua.dureza }}</td>
+                </tr>
+                 <tr>
+                    <td>pH:</td>
+                    <td>{{ caliagua.dureza }}</td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <a class="btn btn-large btn-flat waves-effect right" href="{% url 'cultivo_editar' cultivo.id %}">Editar</a>
         </div>
     </div>
-
 {% endblock %}

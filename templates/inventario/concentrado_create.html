@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    registrar-producto-concentrado
+{% endblock %}
+
+{% block retroceso %}
+    {% include 'retroceso.html' %}
+{% endblock %}
+
+{% block main_title %}
+    Producto concentrado
+{% endblock %}
+
+{% block micontenido %}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card">
+                <div class="card-content ">
+                    <form method="post">
+                        {% csrf_token %}
+                            {{ form.as_p}}
+                        <br>
+                        <div class="row">
+                            <button class="btn btn-large btn-flat waves-effect right" type="submit">
+                                <i class="material-icons right">create</i>
+                                registrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

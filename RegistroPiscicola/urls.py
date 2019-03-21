@@ -23,6 +23,7 @@ urlpatterns = [
     path('',include('pagina.urls')),
     path('',include('registro.urls')),
     path('',include('control.urls')),
+    path('',include('inventario.urls')),
     path('',include('users.urls')),
 ]
 

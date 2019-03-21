@@ -1,11 +1,10 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     {% include 'config.html' %}
     <!-- favicon -->
-    <link rel="icon" href="{% static 'img/control-piscicola.png' %}"/>
+    <link rel="icon" href="{% static 'img/control-piscicolawb.ico' %}"/>
     <!-- titulo pestaña -->
     <title>
         Control Piscícola |
@@ -20,19 +19,17 @@
 <header>
     {% include 'navinicio.html' %}
 </header>
-
-<!-- contnido principal -->
+<!-- contenido principal -->
 <main>
-
-
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <!-- titulo de sección  -->
             <div class="center">
-
-                <h4><span class="left">{% block retroceso %}
-                    {% endblock %}</span>
-
+                <h4>
+                    <span class="left">
+                        {% block retroceso %}
+                        {% endblock %}
+                    </span>
                     {% block main_title %}
                         BIENVENIDO
                     {% endblock %}
@@ -54,11 +51,10 @@
                                 <p>{{ mensaje }}</p>
                             {% endif %}
                         </div>
-
                     {% endblock %}
+                </div>
             </section>
         </div>
-    </div>
     </div>
     {% if user.is_authenticated %}
         {% if  user.profile.trabaja_en %}
@@ -80,12 +76,20 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="{% static 'js/materialize.min.js' %}"></script>
 <script src="{% static 'js/init.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
-
-
+<!--
 <script>
     M.AutoInit();
 </script>
-
+Scripts-->
+<script>
+    $(document).ready(function () {
+        $('select').formSelect();
+        $('input.autocomplete').autocomplete();
+    });
+</script>
+{% block custom_script %}
+{% endblock %}
 </body>
 </html>

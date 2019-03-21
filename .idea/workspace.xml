@@ -1,7 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="072ec1b8-d2cb-407f-8559-81c91454bf57" name="Default Changelist" comment="" />
+    <list default="true" id="072ec1b8-d2cb-407f-8559-81c91454bf57" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/control/migrations/0002_auto_20190213_2129.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/migrations/0004_auto_20190218_1448.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/migrations/0005_auto_20190218_1610.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/migrations/0006_auto_20190302_1435.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/migrations/0007_auto_20190319_2350.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/migrations/0008_auto_20190320_2342.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/control/migrations/0009_auto_20190321_0013.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/migrations/0002_auto_20190227_2007.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/migrations/0003_auto_20190228_0210.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/migrations/0004_auto_20190302_1435.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/migrations/0005_compradebultos_finca.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registro/migrations/0002_auto_20190228_0210.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registro/migrations/0004_auto_20190319_2350.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registro/migrations/0005_auto_20190319_2352.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registro/migrations/0006_auto_20190320_0858.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registro/migrations/0008_auto_20190320_1615.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/control/calidad_agua_rangos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/control/grafica_muestreo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/control/muestreo_registrar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/inventario/compra_bultos_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/inventario/compra_bultos_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/inventario/concentrado_create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/inventario/concentrado_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registro/color_etapa.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistroPiscicola/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/RegistroPiscicola/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RegistroPiscicola/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RegistroPiscicola/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/migrations/0002_auto_20181129_0034.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/migrations/0003_auto_20181201_0056.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/migrations/0004_auto_20181201_0134.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/migrations/0009_auto_20190321_0013.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/migrations/0005_auto_20181201_0205.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/migrations/0006_rangos_calidad_agua.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/migrations/0002_auto_20181025_2338.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pagina/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0002_auto_20181025_2325.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0003_auto_20181025_2338.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0004_auto_20181025_2347.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0005_auto_20181025_2357.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0006_auto_20181026_0004.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0007_auto_20181026_0011.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0008_auto_20181026_0020.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/migrations/0003_auto_20190302_1435.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0009_auto_20181030_0132.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0010_auto_20181101_0216.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0011_remove_finca_usuarios.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/migrations/0003_remove_muestreo_biomasa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0012_auto_20181109_1519.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0013_auto_20181109_1520.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0014_auto_20181110_2057.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0015_auto_20181117_0123.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0016_cultivo_fecha_cosecha.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/migrations/0017_auto_20181201_0134.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/migrations/0007_auto_20190320_0903.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mystyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/config.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/control/alimentacion_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/alimentacion_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/control/calidad_agua_detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/calidad_agua_detalle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/control/calidad_agua_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/calidad_agua_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/control/graficas_agua.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/graficas_agua.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/control/mortalidad_registrar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/mortalidad_registrar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/control/muestreo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/muestreo_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/control/racion.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/racion.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/navinicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navinicio.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/cosecha_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/cosecha_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/cultivo_crear.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/cultivo_crear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/cultivo_detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/cultivo_detalle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/cultivo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/cultivo_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/estanque_crear.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/estanque_crear.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/estanque_detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/estanque_detalle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/estanque_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/estanque_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registro/la_piscicola.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/la_piscicola.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/retroceso.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retroceso.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/ingresar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/ingresar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,76 +129,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/control/graficas_agua.html">
+        <entry file="file://$PROJECT_DIR$/inventario/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RegistroPiscicola/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2465">
-              <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/control/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1734">
-              <caret line="105" column="47" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#90#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_detalle.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/control/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+            <state relative-caret-position="500">
+              <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="17" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -106,10 +141,82 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_registrar.html">
+        <entry file="file://$PROJECT_DIR$/inventario/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+            <state relative-caret-position="580">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/control/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2540">
+              <caret line="132" column="76" selection-start-line="132" selection-start-column="76" selection-end-line="132" selection-end-column="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inventario/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/inventario/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/inventario/compra_bultos_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RegistroPiscicola/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2280">
+              <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/inventario/compra_bultos_create.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/inventario/concentrado_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="760">
+              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -128,6 +235,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ajuste</find>
+      <find>messages</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,64 +244,64 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pagina/models.py" />
-        <option value="$PROJECT_DIR$/users/forms.py" />
-        <option value="$PROJECT_DIR$/users/views.py" />
         <option value="$PROJECT_DIR$/users/signals.py" />
-        <option value="$PROJECT_DIR$/users/admin.py" />
-        <option value="$PROJECT_DIR$/users/models.py" />
-        <option value="$PROJECT_DIR$/templates/error.html" />
-        <option value="$PROJECT_DIR$/templates/pagina/ingresar.html" />
-        <option value="$PROJECT_DIR$/templates/registro/cultivo_create.html" />
-        <option value="$PROJECT_DIR$/templates/users/ingresar.html" />
-        <option value="$PROJECT_DIR$/templates/users/salir.html" />
-        <option value="$PROJECT_DIR$/templates/users/registro.html" />
-        <option value="$PROJECT_DIR$/templates/users/perfil.html" />
-        <option value="$PROJECT_DIR$/templates/navinicio.html" />
-        <option value="$PROJECT_DIR$/templates/registro/la_piscicola.html" />
-        <option value="$PROJECT_DIR$/registro/forms.py" />
-        <option value="$PROJECT_DIR$/registro/urls.py" />
-        <option value="$PROJECT_DIR$/templates/control/muestreo_list.html" />
-        <option value="$PROJECT_DIR$/registro/models.py" />
-        <option value="$PROJECT_DIR$/pagina/urls.py" />
-        <option value="$PROJECT_DIR$/pagina/views.py" />
-        <option value="$PROJECT_DIR$/RegistroPiscicola/__init__.py" />
-        <option value="$PROJECT_DIR$/RegistroPiscicola/urls.py" />
-        <option value="$PROJECT_DIR$/control/models.py" />
-        <option value="$PROJECT_DIR$/control/forms.py" />
+        <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/control/admin.py" />
-        <option value="$PROJECT_DIR$/templates/footer.html" />
-        <option value="$PROJECT_DIR$/registro/views.py" />
-        <option value="$PROJECT_DIR$/templates/users/retroceso.html" />
-        <option value="$PROJECT_DIR$/templates/registro/cultivo_crear.html" />
+        <option value="$PROJECT_DIR$/templates/inventario/concentradocrear.html" />
+        <option value="$PROJECT_DIR$/templates/inventario/concentrado_crear.html" />
+        <option value="$PROJECT_DIR$/RegistroPiscicola/urls.py" />
+        <option value="$PROJECT_DIR$/registro/urls.py" />
+        <option value="$PROJECT_DIR$/inventario/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/templates/inventario/compra_de_bultos_create.html" />
+        <option value="$PROJECT_DIR$/inventario/admin.py" />
+        <option value="$PROJECT_DIR$/pagina/views.py" />
+        <option value="$PROJECT_DIR$/templates/control/graficas_muestreo.html" />
+        <option value="$PROJECT_DIR$/control/urls.py" />
+        <option value="$PROJECT_DIR$/templates/control/muestreo_list.html" />
+        <option value="$PROJECT_DIR$/templates/control/muestreo_registrar.html" />
+        <option value="$PROJECT_DIR$/templates/control/alimentacion_list.html" />
+        <option value="$PROJECT_DIR$/templates/registro/cosecha_list.html" />
+        <option value="$PROJECT_DIR$/templates/registro/estanque_crear.html" />
         <option value="$PROJECT_DIR$/templates/registro/estanque_detalle.html" />
         <option value="$PROJECT_DIR$/templates/retroceso.html" />
-        <option value="$PROJECT_DIR$/templates/registro/cultivo_detalle.html" />
-        <option value="$PROJECT_DIR$/templates/control/alimentacion_list.html" />
-        <option value="$PROJECT_DIR$/templates/control/mortalidad_registrar.html" />
-        <option value="$PROJECT_DIR$/templates/control/racion.html" />
-        <option value="$PROJECT_DIR$/templates/registro/estanque_list.html" />
-        <option value="$PROJECT_DIR$/templates/registro/cosecha_list.html" />
-        <option value="$PROJECT_DIR$/static/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/templates/config.html" />
+        <option value="$PROJECT_DIR$/templates/users/ingresar.html" />
+        <option value="$PROJECT_DIR$/templates/footer.html" />
+        <option value="$PROJECT_DIR$/templates/navinicio.html" />
+        <option value="$PROJECT_DIR$/templates/registro/color_etapa.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/control/graficas_agua.html" />
-        <option value="$PROJECT_DIR$/RegistroPiscicola/settings.py" />
-        <option value="$PROJECT_DIR$/templates/control/calidad_agua_registrar.html" />
-        <option value="$PROJECT_DIR$/templates/registro/estanque_crear.html" />
-        <option value="$PROJECT_DIR$/templates/registro/cultivo_list.html" />
-        <option value="$PROJECT_DIR$/templates/control/calidad_agua_detalle.html" />
-        <option value="$PROJECT_DIR$/control/urls.py" />
-        <option value="$PROJECT_DIR$/control/views.py" />
+        <option value="$PROJECT_DIR$/registro/forms.py" />
+        <option value="$PROJECT_DIR$/registro/views.py" />
         <option value="$PROJECT_DIR$/templates/control/calidad_agua_list.html" />
-        <option value="$PROJECT_DIR$/requirements.txt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/templates/control/calidad_agua_rangos.html" />
+        <option value="$PROJECT_DIR$/RegistroPiscicola/settings.py" />
+        <option value="$PROJECT_DIR$/templates/control/calidad_agua_detalle.html" />
+        <option value="$PROJECT_DIR$/templates/registro/cultivo_detalle.html" />
+        <option value="$PROJECT_DIR$/templates/registro/cultivo_list.html" />
+        <option value="$PROJECT_DIR$/templates/registro/estanque_list.html" />
+        <option value="$PROJECT_DIR$/templates/control/graficas_agua.html" />
+        <option value="$PROJECT_DIR$/templates/registro/la_piscicola.html" />
+        <option value="$PROJECT_DIR$/static/css/mystyle.css" />
+        <option value="$PROJECT_DIR$/templates/registro/cultivo_crear.html" />
+        <option value="$PROJECT_DIR$/control/forms.py" />
+        <option value="$PROJECT_DIR$/templates/control/racion.html" />
+        <option value="$PROJECT_DIR$/control/models.py" />
+        <option value="$PROJECT_DIR$/registro/models.py" />
+        <option value="$PROJECT_DIR$/inventario/forms.py" />
+        <option value="$PROJECT_DIR$/templates/inventario/compra_bultos_create.html" />
+        <option value="$PROJECT_DIR$/control/views.py" />
+        <option value="$PROJECT_DIR$/inventario/urls.py" />
+        <option value="$PROJECT_DIR$/templates/inventario/concentrado_list.html" />
+        <option value="$PROJECT_DIR$/inventario/models.py" />
+        <option value="$PROJECT_DIR$/inventario/views.py" />
+        <option value="$PROJECT_DIR$/templates/inventario/compra_bultos_list.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="179" />
-    <option name="y" value="278" />
-    <option name="width" value="1013" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="593" />
     <option name="height" value="768" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -210,6 +318,44 @@
               <item name="RegistroPiscicola" type="b2602c69:ProjectViewProjectNode" />
               <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="RegistroPiscicola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
+              <item name="registro" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RegistroPiscicola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
+              <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RegistroPiscicola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RegistroPiscicola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RegistroPiscicola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RegistroPiscicola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RegistroPiscicola" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RegistroPiscicola" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="inventario" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -222,19 +368,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\static\js" />
-      <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\static\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\static\img" />
       <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\templates" />
       <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola" />
       <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\templates\pagina" />
-      <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\static\img" />
       <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\media\profile_pics" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\static\js" />
+      <recent name="C:\Users\Gilachus\PycharmProjects\RegistroPiscicola\static\css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -289,22 +435,51 @@
       <workItem from="1548801769369" duration="13659000" />
       <workItem from="1548821547970" duration="1270000" />
       <workItem from="1548865186304" duration="8200000" />
-      <workItem from="1548945144581" duration="3447000" />
+      <workItem from="1548945144581" duration="6388000" />
+      <workItem from="1549418697139" duration="10657000" />
+      <workItem from="1549463301477" duration="13224000" />
+      <workItem from="1549508374754" duration="106000" />
+      <workItem from="1549596495816" duration="16641000" />
+      <workItem from="1549638138469" duration="2958000" />
+      <workItem from="1549653776075" duration="12438000" />
+      <workItem from="1549672221945" duration="2382000" />
+      <workItem from="1549996857466" duration="595000" />
+      <workItem from="1550065225045" duration="571000" />
+      <workItem from="1550077835316" duration="8556000" />
+      <workItem from="1550178475834" duration="7882000" />
+      <workItem from="1550504701815" duration="10049000" />
+      <workItem from="1551298998724" duration="340000" />
+      <workItem from="1551299985132" duration="19779000" />
+      <workItem from="1551379846840" duration="4434000" />
+      <workItem from="1551456163519" duration="3429000" />
+      <workItem from="1551543863313" duration="12378000" />
+      <workItem from="1551564314568" duration="2706000" />
+      <workItem from="1552152949121" duration="8277000" />
+      <workItem from="1552196329391" duration="3052000" />
+      <workItem from="1552420439324" duration="8098000" />
+      <workItem from="1552479573511" duration="12476000" />
+      <workItem from="1553005266744" duration="2269000" />
+      <workItem from="1553044608830" duration="15747000" />
+      <workItem from="1553086475868" duration="10338000" />
+      <workItem from="1553112345992" duration="6615000" />
+      <workItem from="1553131447117" duration="15772000" />
+      <workItem from="1553150284982" duration="100000" />
+      <workItem from="1553168108890" duration="578000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27674000" />
+    <option name="totallyTimeSpent" value="243062000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="776" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17145015" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1709531" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32718894" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32826748" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32668713" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32668713" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39878234" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -313,22 +488,22 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007553" side_tool="true" weight="0.20243531" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924472" visible="true" weight="0.20212767" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49924472" visible="true" weight="0.26226994" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32724506" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.5226929" />
+      <window_info anchor="right" id="Database" order="4" weight="0.5226586" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19561933" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16641453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32718894" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32876712" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39878234" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32668713" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32668713" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39878234" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -336,13 +511,13 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007553" side_tool="true" weight="0.20243531" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924472" weight="0.20243531" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49924472" visible="true" weight="0.3006135" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32724506" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.5226929" />
+      <window_info anchor="right" id="Database" order="4" weight="0.5226586" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,367 +541,366 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RegistroPiscicola/__init__.py">
+    <entry file="file://$PROJECT_DIR$/templates/registro/estanque_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/forms/widgets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="275" selection-start-line="275" selection-end-line="275" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/config.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/nav.html" />
+    <entry file="file://$PROJECT_DIR$/registro/migrations/0004_auto_20190319_2350.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
+    <entry file="file://$PROJECT_DIR$/templates/pagina/ingresar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="20">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/runpy.py">
+    <entry file="file://$PROJECT_DIR$/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/users/ingresar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="220">
+          <caret line="23" column="49" selection-start-line="23" selection-start-column="49" selection-end-line="23" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/__init__.py">
+    <entry file="file://$PROJECT_DIR$/templates/footer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6086">
-          <caret line="374" selection-start-line="374" selection-end-line="374" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/management/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5423">
-          <caret line="328" selection-start-line="328" selection-end-line="328" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/db/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3485">
-          <caret line="213" selection-start-line="213" selection-end-line="213" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/utils/functional.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/conf/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#247#263#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/importlib/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-          <folding>
-            <element signature="e#604#673#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/registro/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="20">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/registro/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="69" selection-end-line="69" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registro/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registro/admin.py">
+    <entry file="file://$PROJECT_DIR$/pagina/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret selection-end-line="6" selection-end-column="28" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/registro/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RegistroPiscicola/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RegistroPiscicola/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="344">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
           <folding>
             <element signature="e#641#673#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="171" column="108" selection-start-line="171" selection-start-column="108" selection-end-line="171" selection-end-column="108" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <marker date="1548787906652" expanded="true" signature="671:676" ph="..." />
-            <marker date="1548787906652" expanded="true" signature="3739:4090" ph="..." />
-            <marker date="1548787906652" expanded="true" signature="8316:8321" ph="..." />
-            <marker date="1548787906652" expanded="true" signature="8562:8567" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/control/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registro/la_piscicola.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/nav.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/navinicio.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="22" column="49" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registro/cultivo_crear.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pagina/ingresar.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/ingresar.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/salir.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/users/registro.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/control/racion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/control/mortalidad_registrar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/control/alimentacion_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/config.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/retroceso.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" selection-start-line="2" selection-end-line="2" selection-end-column="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registro/cosecha_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        <state relative-caret-position="300">
+          <caret line="72" column="28" lean-forward="true" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1312">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="120">
+          <caret line="6" column="65" selection-start-line="6" selection-start-column="65" selection-end-line="6" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/mystyle.css">
+    <entry file="file://$PROJECT_DIR$/templates/retroceso.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1520">
-          <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
+        <state relative-caret-position="40">
+          <caret line="2" column="76" selection-start-line="2" selection-start-column="69" selection-end-line="2" selection-end-column="82" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registro/estanque_crear.html">
+    <entry file="file://$PROJECT_DIR$/templates/registro/color_etapa.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state relative-caret-position="140">
+          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registro/cultivo_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="16" column="59" lean-forward="true" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="64" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/control/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registro/estanque_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-end-line="7" selection-end-column="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registro/cultivo_detalle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registro/estanque_detalle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/registro/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/registro/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="78" column="90" selection-start-line="78" selection-start-column="90" selection-end-line="78" selection-end-column="90" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/control/graficas_agua.html">
+    <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        <state relative-caret-position="100">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RegistroPiscicola/settings.py">
+    <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_registrar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2465">
-          <caret line="145" column="34" selection-start-line="145" selection-start-column="34" selection-end-line="145" selection-end-column="34" />
+        <state relative-caret-position="40">
+          <caret line="2" column="17" lean-forward="true" selection-end-line="36" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/views.py">
+    <entry file="file://$PROJECT_DIR$/pagina/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1734">
-          <caret line="105" column="47" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
+        <state relative-caret-position="-40">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
           <folding>
-            <element signature="e#0#90#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pagina/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registro/estanque_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="39" column="53" lean-forward="true" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registro/cultivo_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-467">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registro/cultivo_detalle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_detalle.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+        <state relative-caret-position="253">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/control/graficas_agua.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="49" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
+        <state relative-caret-position="333">
+          <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/control/grafica_muestreo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-607">
+          <caret column="25" lean-forward="true" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registro/la_piscicola.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="15" column="68" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="107" column="35" lean-forward="true" selection-start-line="107" selection-start-column="35" selection-end-line="107" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registro/cultivo_crear.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_rangos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registro/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-281">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/control/racion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="186" column="51" lean-forward="true" selection-start-line="186" selection-start-column="51" selection-end-line="186" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <marker date="1553144688387" expanded="true" signature="875:880" ph="..." />
+            <marker date="1553144688387" expanded="true" signature="6604:7591" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registro/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="58" column="62" lean-forward="true" selection-start-line="58" selection-start-column="62" selection-end-line="58" selection-end-column="62" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_registrar.html">
+    <entry file="file://$PROJECT_DIR$/templates/control/alimentacion_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+        <state relative-caret-position="144">
+          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/control/calidad_agua_list.html">
+    <entry file="file://$PROJECT_DIR$/control/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+        <state relative-caret-position="-180">
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/control/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="23" column="15" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="26" selection-end-column="99" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/templates/control/muestreo_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        <state relative-caret-position="40">
+          <caret line="2" column="17" lean-forward="true" selection-end-line="55" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventario/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventario/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2540">
+          <caret line="132" column="76" selection-start-line="132" selection-start-column="76" selection-end-line="132" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventario/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventario/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/inventario/compra_bultos_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/inventario/concentrado_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/inventario/compra_bultos_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="34" column="51" selection-start-line="34" selection-start-column="51" selection-end-line="34" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegistroPiscicola/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2280">
+          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
         </state>
       </provider>
     </entry>

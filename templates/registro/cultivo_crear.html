@@ -5,24 +5,31 @@
 {% endblock %}
 
 {% block retroceso %}
-{% include 'retroceso.html' %}
+    {% include 'retroceso.html' %}
 {% endblock %}
 
 {% block main_title %}
-    {{ titulo }}
+    <span class="margin-derecha">{{ titulo }}</span>
 {% endblock %}
 
 {% block micontenido %}
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card">
+                {% if messages %}
+                    {% for message in  messages %}
+                        {{ message }}
+                    {% endfor %}
+                {% endif %}
                 <div class="card-content ">
+
                     <form method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
                         <br>
+                        <div class="red-text" id="select-error"></div>
                         <div class="row">
-                            <button class="btn btn-large btn-flat waves-effect right" type="submit">
+                            <button class="btn btn-large btn-flat waves-effect right validar" type="submit">
                                 <i class="material-icons right">create</i>
                                 registrar
                             </button>
@@ -32,6 +39,20 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block custom_script %}
+    <script>
+        $(document).ready(function () {
+            $('.validar').click(function () {
+                console.log('hola')
+                select = $("#id_estanque option:selected").text()
+                if (select == '---------') {
+                    $('#select-error').html('<p>por favor seleccione un estanque</p>')
+                }
 
+            })
+            /* $('input').parent().attr('class', 'input-field');*/
+        });
 
+    </script>
 {% endblock %}

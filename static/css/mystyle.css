@@ -1,96 +1,167 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 .icon-block {
-  padding: 0 15px;
+    padding: 0 15px;
 }
+
 .icon-block .material-icons {
-	font-size: inherit;
+    font-size: inherit;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    color: #323232!important;
+    color: #323232 !important;
 }
+
 main {
     flex: 1 0 auto;
 }
-p{
+
+p {
     margin-top: .8em;
 }
+
 footer[class*="page-footer"] {
     padding-top: 15px;
 }
-.max{
+
+.max {
     max-height: 200px;
     max-width: 200px;
     padding: 0;
- }
-.centrar{
+}
+
+.centrar {
     display: block;
     margin: auto;
 }
-h1, h2, h3, h4, h5, h6, .robotocondensed{
+
+h1, h2, h3, h4, h5, h6, .robotocondensed {
     font-family: 'Roboto Condensed', sans-serif;
 }
+
 /*tamaño del logo*/
-.ajuste{
-    /*vertical-align: middle;*/
+.ajuste {
+    /* vertical-align: middle; */
     max-width: 100%;
     max-height: 100%;
     padding: 10px 5px;
     margin: auto;
-    /*display: block;*/
+    /* display: block; */
 }
 
-/*acercando el logo*/
-.brand-logo i{
-    margin-right: 5px!important;
-    margin-left: 5px!important;
+/* acercando el logo */
+.brand-logo i {
+    margin-right: 5px !important;
+    margin-left: 5px !important;
 }
-/*reducir el input de subir imagenes*/
-#id_image{
+
+/* reducir el input de subir imagenes */
+#id_image {
     font-size: 1rem;
     max-width: 100%;
 }
+
 /*cuadrando inputs y labels*/
-input[id]{
-
+input[id] {
+    height: 1.5rem !important;
+    margin-bottom: 18px !important;
 }
-label[for]{
+
+input.select-dropdown {
+    margin-bottom: 15px !important;
+}
+
+textarea[id] {
+    margin-bottom: 18px !important;
+}
+
+label[for] {
     color: #424242;
-    font-size: 1.1rem!important;
+    font-size: 1rem !important;
 }
 
 
-/* colorear errores del form*/
-ul[class="errorlist"]{
-    color: #8b1014;
+/* colorear errores del form */
+ul[class="errorlist"] {
+    color: #f44336;
 }
 
 @media only screen and (max-width: 600px) {
     /*fontsize general*/
-    html{
-        font-size: 17px!important;
+    html {
+        font-size: 17px !important;
     }
-    input[id]{
-    font-size: 20px!important;
-    height: 2.5rem!important;
-}
+
+    input[id] {
+        font-size: 20px !important;
+        height: 2.5rem !important;
+    }
+
+    .modal .modal-content {
+        padding: 10px !important;
+    }
+    input[class="datepicker"] {
+        font-size: 16px !important;
+        height: 1.5rem !important;
+    }
+    .full_ancho_m {
+        width: 100%;
+    }
 }
 
-/* mejorando materialize*/
-.row{
-    margin: 0!important;
+/* mejorando materialize */
+.row {
+    margin: 0 !important;
 }
-.btn{
+
+.btn {
     font-family: "Roboto Condensed", sans-serif;;
 }
-.btn:hover{
-    background:  #03a9f4;
+
+.btn:hover {
+    background: #03a9f4;
     color: #fff;
 }
-#mychart{
+
+#mychart {
     border: solid 2px black;
+}
+
+ul {
+    margin: 0 !important;
+}
+
+.collapsible-body {
+    padding: 0 0 10px 0;
+}
+
+/* centrando titulos que tienen retroceso */
+.margin-derecha {
+    margin-right: 32px;
+}
+
+/* boton ingresar ancho */
+.full_ancho {
+    width: 100%;
+}
+
+/* gradiente en footer */
+footer,
+nav,
+.nav_mobile {
+    background: #0d47a1;
+    background: -webkit-linear-gradient(to right, #0d47a1, #03a9f4);
+    background: linear-gradient(to right, #0d47a1, #03a9f4);
+}
+/* botones no inline block */
+.nowrap {
+    white-space: nowrap;
+}
+/* cursiva */
+.italic {
+    font-style: italic;
 }

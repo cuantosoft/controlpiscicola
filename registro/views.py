@@ -1,29 +1,31 @@
 from django.shortcuts import render, redirect
 from .models import *
-from .forms import  EstanqueCreateForm, CultivoCreateForm
+from .forms import EstanqueCreateForm, EstanqueEditForm, CultivoCreateForm, CultivoEditForm
 from django.shortcuts import get_object_or_404
 from django.http import Http404
 from django.views.generic import ListView,CreateView
 from django.urls import reverse_lazy
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 
-# principio
-def la_piscicola(request):
-    try:
-        la_piscicola = request.user.profile.trabaja_en
-        if  'la_piscicola' not in request.session:
-            request.session['la_piscicola']=la_piscicola.id
-    except:
-        la_piscicola = None
-        # raise Http404("Este usuario no tiene un finca asignada")
+@login_required
+def la_piscicola(request):  # página inicial logeado
+    la_piscicola_obj = request.user.profile.trabaja_en
+    print(request.user.profile.trabaja_en)
+    if la_piscicola_obj is not None:
+        if 'la_piscicola' not in request.session:
+            request.session['la_piscicola'] = la_piscicola_obj.id
+    # raise Http404("Este usuario no tiene un finca asignada")
+    else:
+        messages.error(request, 'el usuario no esta asignado a ninguna finca')
     context = {
-        'la_piscicola': la_piscicola
+        'la_piscicola': la_piscicola_obj
     }
     return render(request,'registro/la_piscicola.html', context)
 
-
-# estanque views
+# ----estanque views----------------------------------------------------------------------------------------------------
+@login_required
 def estanque_list(request):
     finca = None
     lista = None
@@ -45,8 +47,9 @@ def estanque_list(request):
     }
     return render(request, 'registro/estanque_list.html', context)
 
+
+@login_required
 def estanque_crear(request):
-    print(request)
     if request.method == 'POST':
         form = EstanqueCreateForm(request.POST or None)
         if form.is_valid():
@@ -64,28 +67,31 @@ def estanque_crear(request):
     return render(request, 'registro/estanque_crear.html', context)
 
 
+@login_required
 def estanque_detalle(request, estanque_id):
-    estanque =get_object_or_404(Estanque, pk=estanque_id)
+    estanque = get_object_or_404(Estanque, pk=estanque_id)
     return render(request,'registro/estanque_detalle.html', {'estanque': estanque})
 
 
+@login_required
 def estanque_editar(request, estanque_id):
     objeto = get_object_or_404(Estanque, pk=estanque_id)
-    form = EstanqueCreateForm(request.POST or None, instance=objeto)
+    form = EstanqueEditForm(request.POST or None, instance=objeto, estanque_id=estanque_id)
     if form.is_valid():
         form.save()
         return redirect('estanque_detalle', estanque_id)
-    context={
+    context = {
         'form': form,
         'titulo': 'Editar estanque'
     }
     return render(request, 'registro/estanque_crear.html', context)
 
 
-# cultivo views
+# ----cultio views------------------------------------------------------------------------------------------------------
+@login_required
 def cultivo_list(request):
-    finca=None
-    lista=None
+    finca = None
+    lista = None
     if request.user.is_authenticated:
         finca = request.user.profile.trabaja_en
         lista = Cultivo.objects.filter(finca=finca, cosechado=False).order_by('-fecha_registro')
@@ -112,8 +118,16 @@ def cultivo_crear(request):
         if form.is_valid():
             cultivo = form.save(commit=False)
             cultivo.finca = request.user.profile.trabaja_en
-            cultivo.responsable = request.user
-            cultivo.save()
+            cultivo.responsable = request.user.name
+            peso = form.cleaned_data['peso_pez_gr']
+            if 40 < peso < 120:
+                cultivo.etapa = "levante"
+                cultivo.save()
+            if peso >= 120:
+                cultivo.etapa = "engorde"
+                cultivo.save()
+            else:
+                cultivo.save()
             return redirect('cultivo_list')
     context = {
         'form': form,
@@ -122,6 +136,7 @@ def cultivo_crear(request):
     return render(request, 'registro/cultivo_crear.html', context)
 
 
+@login_required
 def cultivo_detalle(request, cultivo_id):
     try:
         cultivo = Cultivo.objects.get(pk=cultivo_id)
@@ -129,18 +144,34 @@ def cultivo_detalle(request, cultivo_id):
         raise Http404("no existe ese cultivo")
     return render(request,'registro/cultivo_detalle.html', {'cultivo': cultivo})
 
+
+@login_required
 def cultivo_editar(request, cultivo_id):
     objeto = get_object_or_404(Cultivo, pk=cultivo_id)
-    form = CultivoCreateForm(request.POST or None, instance=objeto)
-    if form.is_valid():
-        form.save()
-        return redirect('cultivo_detalle', cultivo_id)
-    context={
+    form = CultivoEditForm(request.POST or None, instance=objeto, cultivo_id=cultivo_id)
+    if request.method == 'POST':
+        print(form.errors)
+        if form.is_valid():
+            print('es valido')
+            cultivo = form.save(commit=False)
+            peso = cultivo.peso_pez_gr
+            if 40 < peso < 120:
+                cultivo.etapa = "levante"
+                cultivo.save()
+            if peso >= 120:
+                cultivo.etapa = "engorde"
+                cultivo.save()
+            else:
+                cultivo.save()
+            return redirect('cultivo_detalle', cultivo_id)
+    context = {
         'form': form,
         'titulo': 'Editar cultivo'
     }
     return render(request, 'registro/cultivo_crear.html', context)
 
+
+@login_required
 def cosecha_list(request):
     finca = None
     lista = None

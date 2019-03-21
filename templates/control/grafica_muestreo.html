@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    gráfica-talla-peso
+{% endblock %}
+
+{% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
+    {% include 'retroceso.html' %}
+{% endblock %}
+
+{% block main_title %}
+    Gráfica talla y peso cultivo: {{ cultivo.nombre }}
+{% endblock %}
+
+{% block micontenido %}
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            {% if object_list is None %}
+                <p class="center">No hay registros de talla y peso</p>
+            {% else %}
+                <canvas id="mychart1" width="400" height="200"></canvas>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block custom_script %}
+    <script>
+        new Chart(document.getElementById("mychart1"), {
+            "type": "line",
+            "data": {
+                "labels": [{% for f in fechas %}"{{ f }}",{% endfor %}],
+                "datasets": [{
+                    "label": "talla",
+                    "data": {{ talla }},
+                    "fill": false,
+                    "borderColor": "rgb(250, 128, 114)",
+                    "lineTension": 0.1
+                    },
+                    {
+                    "label": "peso",
+                    "data": {{ peso }},
+                    "fill": false,
+                    "borderColor": "rgb(75, 192, 192)",
+                    "lineTension": 0.1
+                    }
+                ]
+            }, "options": {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        })
+    </script>
+{% endblock %}

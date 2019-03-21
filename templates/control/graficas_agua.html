@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    gráficas-agua
+    gráficas: calidad agua
 {% endblock %}
 
 {% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
@@ -14,31 +14,105 @@
 
 {% block micontenido %}
     <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m9 offset-m2">
             {% if object_list is None %}
                 <p class="center">No hay registros de calidad de agua</p>
+            {% else %}
+                <ul class="collapsible expandable">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">timeline</i>oxígeno</div>
+                        <div class="collapsible-body">
+                            <canvas id="mychart1" width="400" height="200"></canvas>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">timeline</i>temperatura</div>
+                        <div class="collapsible-body">
+                            <canvas id="mychart2" width="400" height="200"></canvas>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">timeline</i>ph</div>
+                        <div class="collapsible-body">
+                            <canvas id="mychart3" width="400" height="200"></canvas>
+                        </div>
+                    </li>
+                </ul>
             {% endif %}
         </div>
-        <div class="row">
-            <div class="col s12 m8 offset-m2">
-                <canvas id="mychart2" width="400" height="300"></canvas>
-            </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 
-        <script>
-            new Chart(document.getElementById("mychart2"), {
-                "type": "line",
-                "data": {
-                    "labels": [{% for f in fechas %}"{{ f }}",{% endfor %}],
-                    "datasets": [{
-                        "label": "Niveles de oxígeno",
-                        "data": {{ oxigeno }},
-                        "fill": false,
-                        "borderColor": "rgb(75, 192, 192)",
-                        "lineTension": 0.1
+    </div>
+{% endblock %}
+
+{% block custom_script %}
+    <script>
+        new Chart(document.getElementById("mychart1"), {
+            "type": "line",
+            "data": {
+                "labels": [{% for f in fechas %}"{{ f }}",{% endfor %}],
+                "datasets": [{
+                    "label": "Niveles de oxígeno",
+                    "data": {{ oxigeno }},
+                    "fill": false,
+                    "borderColor": "#4527a0",
+                    "lineTension": 0.1
+                }]
+            }, "options": {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
                     }]
-                }, "options": {}
-            });
-        </script>
+                }
+            }
+        });
+        new Chart(document.getElementById("mychart2"), {
+            "type": "line",
+            "data": {
+                "labels": [{% for f in fechas %}"{{ f }}",{% endfor %}],
+                "datasets": [{
+                    "label": "Temperatura °C",
+                    "data": {{ temperatura }},
+                    "fill": false,
+                    "borderColor": "#c62828",
+                    "lineTension": 0.1
+                }]
+            }, "options": {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        new Chart(document.getElementById("mychart3"), {
+            "type": "line",
+            "data": {
+                "labels": [{% for f in fechas %}"{{ f }}",{% endfor %}],
+                "datasets": [{
+                    "label": "pH",
+                    "data": {{ ph }},
+                    "fill": false,
+                    "borderColor": "#ad1457",
+                    "lineTension": 0.1
+                }]
+            }, "options": {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+
+        var elem = document.querySelector('.collapsible.expandable');
+        var instance = M.Collapsible.init(elem, {
+            accordion: false
+        });
+    </script>
 {% endblock %}

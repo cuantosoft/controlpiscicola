@@ -5,14 +5,22 @@
 {% endblock %}
 
 {% block retroceso %}
-<a href="/piscicola" class="btn-floating btn-small waves-effect waves-light blue darken-4"><i class="material-icons">arrow_back</i></a>
+    <a href="/piscicola" class="btn-floating btn-small waves-effect waves-light blue darken-4"><i
+            class="material-icons">arrow_back</i></a>
 {% endblock %}
 
 {% block main_title %}
-    {{ titulo }}
+    <span class="margin-derecha">{{ titulo }}</span>
 {% endblock %}
 
 {% block micontenido %}
+
+    {% if cultivos %}
+        <div class="center">
+            <small class="orange-text text-accent-2">número de cultivos: {{ cultivos|length }}</small>
+        </div>
+    {% endif %}
+
     <div class="row">
         <a href="{% url 'cultivo_crear' %}" class="btn btn-large btn-flat waves-effect waves-light right">
             <i class="material-icons right">add</i>
@@ -21,18 +29,21 @@
     </div>
 
     {% if cultivos %}
-        <div class="row center"><span class="">número de cultivos: {{ cultivos|length }}</span></div>
-
         <div class="row">
             <ul>
                 {% for cultivo in cultivos %}
                     <li class="col s12 m6">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title">{{ cultivo.nombre }}</span>
+                                <span class="card-title">
+                                    {{ cultivo.nombre }}
+                                    <span class="right">{% include 'registro/color_etapa.html' %}</span>
+                                </span>
+
                             </div>
                             <div class="card-action">
-                                <a class="valign-wrapper" href="{{ cultivo.get_absolute_url }}"><i class="material-icons right">description</i>Detalles</a>
+                                <a class="valign-wrapper blue-text text-darken-4" href="{{ cultivo.get_absolute_url }}">
+                                    <i class="material-icons right blue-text text-darken-4">description</i>Detalles</a>
                             </div>
                         </div>
                     </li>
@@ -44,4 +55,14 @@
         <p>No se han registrado cultivos</p>
     {% endif %}
 
+{% endblock %}
+
+{% block custom_script %}
+    <script>
+        {% if messages %}
+            {% for message in messages %}
+                M.toast({html: '{{ message }}', classes: 'rounded'})
+            {% endfor %}
+        {% endif %}
+    </script>
 {% endblock %}

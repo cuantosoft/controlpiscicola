@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Concentrado
+{% endblock %}
+
+{% block retroceso %}
+    <a href="/piscicola" class="btn-floating btn-small waves-effect waves-light blue darken-4"><i
+            class="material-icons">arrow_back</i></a>
+{% endblock %}
+
+{% block main_title %}
+    <span class="margin-derecha">Mi concentrado</span>
+{% endblock %}
+
+{% block micontenido %}
+
+    {% if concentrados %}
+        <div class="center">
+            <small class="orange-text text-accent-2">tipos de concentrados: {{ concentrados|length }}</small>
+        </div>
+    {% endif %}
+
+    <div class="row">
+        <a href="{% url 'inventario:concentrado_create' %}"
+           class="btn btn-large btn-flat waves-effect waves-light right">
+            <i class="material-icons right">add</i>
+            nuevo tipo concentrado
+        </a>
+        <a href="{% url 'inventario:compra_bultos_create' %}"
+           class="btn btn-large btn-flat waves-effect waves-light right">
+            <i class="material-icons right">add</i>
+            nuevo entrada de concentrado
+        </a>
+        <a href="{% url 'inventario:compra_bultos_list' %}"
+           class="btn btn-large btn-flat waves-effect waves-light right">
+            <i class="material-icons right">format_list_bulleted</i>
+            listado de compras
+        </a>
+    </div>
+
+    {% if concentrados %}
+        <div class="row">
+            <ul>
+                {% for concentrado in concentrados %}
+                    <li class="col s12 m6">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="card-title">{{ concentrado.nombre }}
+                                    <span class="flow-text right">{{ concentrado.total_kg }}Kg</span>
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a class="valign-wrapper blue-text text-darken-4" href="#">
+                                    <i class="material-icons right blue-text text-darken-4">description</i>Detalles</a>
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <p>No se han registrado concentrados</p>
+    {% endif %}
+{% endblock %}

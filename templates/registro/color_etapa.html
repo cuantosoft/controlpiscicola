@@ -1,0 +1,11 @@
+{% load static %}
+
+{% if cultivo.cocechado %}
+    <i class="material-icons light-blue-text text-accent-2">brightness_1</i>
+{% elif cultivo.etapa == 'siembra' %}
+     <i class="material-icons orange-text text-accent-2">brightness_1</i>
+{% elif cultivo.etapa == 'levante' %}
+    <i class="material-icons yellow-text ">brightness_1</i>
+{% elif cultivo.etapa == 'engorde' %}
+    <i class="material-icons green-text ">brightness_1</i>
+{% endif %}

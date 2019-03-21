@@ -4,39 +4,52 @@
     {{ titulo }}
 {% endblock %}
 
+{% block retroceso %}<!-- js página anterior: javascript:window.history.go(-1); -->
+{% include 'retroceso.html' %}
+{% endblock %}
+
 {% block main_title %}
-    Muestreos - Cultivo: {{ cultivo }}
+    Muestreos del cultivo: {{ cultivo }}
 {% endblock %}
 
 {% block micontenido %}
+
     <div class="row">
         <div class="col s12 m8 offset-m3">
-            <a class="btn btn-flat btn-large right" href="#"><i class="material-icons right">add</i>Nuevo
+            <a class="btn btn-flat btn-large right" href="{% url 'control:muestreo_registrar' cultivo.id %}"><i
+                    class="material-icons right">add</i>Nuevo
                 muestreo</a>
+            <a class="btn btn-flat btn-large right" href="{% url 'control:grafica_muestro' cultivo.id %}"><i
+                    class="material-icons right">insert_chart</i>Gráfica talla y peso</a>
         </div>
     </div>
+
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <table class="striped">
+
                 <thead>
                 <tr>
                     <th>Fecha</th>
-                    <th>talla_promedio_cm</th>
-                    <th>Item Price</th>
+                    <th>peso promedio gr</th>
+                    <th>talla promedio cm</th>
                 </tr>
                 </thead>
 
                 <tbody>
                 {% for muestreo in muestreo_list %}
-                <tr>
-                    <td>{{ muestreo.fecha_registro}}</td>
-                    <td>{{ muestreo.talla_promedio_cm}}</td>
-                    <td>{{ muestreo.peso_promedio_gr}}</td>
-                </tr>
+                    <tr>
+                        <td><a href="">{{ muestreo.fecha_registro }}</a></td>
+                        <td>{{ muestreo.peso_promedio_gr }}</td>
+                        <td>{{ muestreo.talla_promedio_cm }}</td>
+                    </tr>
                 {% empty %}
-                    <p class="center">No se han registrado muestreos</p>
+                    <div class="center">
+                        <small>No se han registrado muestreos</small>
+                    </div>
                 {% endfor %}
                 </tbody>
+
             </table>
         </div>
     </div>

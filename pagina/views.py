@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from registro.models import Finca
 
-# Create your views here.
 
 def inicio(request):
 
