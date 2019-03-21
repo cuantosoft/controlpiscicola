@@ -1,108 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="072ec1b8-d2cb-407f-8559-81c91454bf57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/control/migrations/0002_auto_20190213_2129.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control/migrations/0004_auto_20190218_1448.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control/migrations/0005_auto_20190218_1610.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control/migrations/0006_auto_20190302_1435.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control/migrations/0007_auto_20190319_2350.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control/migrations/0008_auto_20190320_2342.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/control/migrations/0009_auto_20190321_0013.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/migrations/0002_auto_20190227_2007.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/migrations/0003_auto_20190228_0210.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/migrations/0004_auto_20190302_1435.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/migrations/0005_compradebultos_finca.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inventario/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registro/migrations/0002_auto_20190228_0210.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registro/migrations/0004_auto_20190319_2350.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registro/migrations/0005_auto_20190319_2352.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registro/migrations/0006_auto_20190320_0858.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/registro/migrations/0008_auto_20190320_1615.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/control/calidad_agua_rangos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/control/grafica_muestreo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/control/muestreo_registrar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/inventario/compra_bultos_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/inventario/compra_bultos_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/inventario/concentrado_create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/inventario/concentrado_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registro/color_etapa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RegistroPiscicola/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/RegistroPiscicola/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RegistroPiscicola/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/RegistroPiscicola/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/migrations/0002_auto_20181129_0034.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/migrations/0003_auto_20181201_0056.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/migrations/0004_auto_20181201_0134.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/migrations/0009_auto_20190321_0013.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/migrations/0005_auto_20181201_0205.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/migrations/0006_rangos_calidad_agua.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/control/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/migrations/0002_auto_20181025_2338.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/inventario/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pagina/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pagina/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0002_auto_20181025_2325.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0003_auto_20181025_2338.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0004_auto_20181025_2347.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0005_auto_20181025_2357.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0006_auto_20181026_0004.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0007_auto_20181026_0011.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0008_auto_20181026_0020.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/migrations/0003_auto_20190302_1435.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0009_auto_20181030_0132.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0010_auto_20181101_0216.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0011_remove_finca_usuarios.py" beforeDir="false" afterPath="$PROJECT_DIR$/control/migrations/0003_remove_muestreo_biomasa.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0012_auto_20181109_1519.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0013_auto_20181109_1520.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0014_auto_20181110_2057.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0015_auto_20181117_0123.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0016_cultivo_fecha_cosecha.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/migrations/0017_auto_20181201_0134.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/migrations/0007_auto_20190320_0903.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registro/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/registro/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/mystyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/config.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/control/alimentacion_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/alimentacion_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/control/calidad_agua_detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/calidad_agua_detalle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/control/calidad_agua_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/calidad_agua_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/control/graficas_agua.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/graficas_agua.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/control/mortalidad_registrar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/mortalidad_registrar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/control/muestreo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/muestreo_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/control/racion.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/control/racion.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/nav.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/navinicio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/navinicio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/cosecha_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/cosecha_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/cultivo_crear.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/cultivo_crear.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/cultivo_detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/cultivo_detalle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/cultivo_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/cultivo_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/estanque_crear.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/estanque_crear.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/estanque_detalle.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/estanque_detalle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/estanque_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/estanque_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registro/la_piscicola.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registro/la_piscicola.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/retroceso.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retroceso.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/ingresar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/ingresar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/signals.py" afterDir="false" />
-    </list>
+    <list default="true" id="072ec1b8-d2cb-407f-8559-81c91454bf57" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -464,12 +363,12 @@
       <workItem from="1553112345992" duration="6615000" />
       <workItem from="1553131447117" duration="15772000" />
       <workItem from="1553150284982" duration="100000" />
-      <workItem from="1553168108890" duration="578000" />
+      <workItem from="1553168108890" duration="1438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243062000" />
+    <option name="totallyTimeSpent" value="243922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
