@@ -19,11 +19,11 @@ class ConcentradoForm(forms.ModelForm):
 
 
 class CompraBultosForm(forms.ModelForm):
-    user = CuserMiddleware.get_user()
-    print(user)
-    if user:
-        finca = user.profile.trabaja_en
-        concentrado = forms.ModelChoiceField(queryset=Concentrado.objects.filter(finca=finca))
+    def __init__(self, *args, **kwargs):
+        super(CompraBultosForm, self).__init__(*args, **kwargs)
+        user = CuserMiddleware.get_user()
+        self.fields['concentrado'] = forms.ModelChoiceField(
+            queryset=Concentrado.objects.filter(finca=user.profile.trabaja_en))
 
     class Meta:
         model = CompradeBultos

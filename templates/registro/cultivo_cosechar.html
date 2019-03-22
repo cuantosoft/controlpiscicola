@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}
+    Confirmar cosecha
+{% endblock %}
+
+{% block main_title %}
+    Confirmar cosecha
+{% endblock %}
+
+{% block micontenido %}
+    <br>
+<form class="center" action="." method="POST">
+    {% csrf_token %}
+    <h4>¿seguro que desea realizar la cocecha del cultivo: {{ cultivo.nombre }}?</h4>
+    <input class="btn light-blue" type="submit" value="si"><a class="btn btn-flat" href="../../">regresar</a>
+</form>
+
+{% endblock %}

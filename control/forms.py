@@ -20,11 +20,11 @@ class MuestreoForm(forms.ModelForm):
 
 
 class AlimentacionForm(forms.ModelForm):  # en realidad es racion
-    user = CuserMiddleware.get_user()
-    print(user)
-    if user:
-        finca = user.profile.trabaja_en
-        tipo_concentrado = forms.ModelChoiceField(queryset=Concentrado.objects.filter(finca=finca))
+    def __init__(self, *args, **kwargs):
+        super(AlimentacionForm, self).__init__(*args, **kwargs)
+        user = CuserMiddleware.get_user()
+        self.fields['tipo_concentrado'] = forms.ModelChoiceField(
+            queryset=Concentrado.objects.filter(finca=user.profile.trabaja_en))
 
     class Meta:
         model = Racion
@@ -37,7 +37,8 @@ class CalidadAguaForm(forms.ModelForm):
         exclude = ['estanque','responsable', 'fecha_registro', 'fecha_update']
 
 
-class CalidadAguaParametrosForm(forms.ModelForm):  # las clases hazlas con camelCase
+class CalidadAguaRangosForm(forms.ModelForm):  # las clases hazlas con camelCase
     class Meta:
         model = Rangos_calidad_agua
         fields = '__all__'
+        exclude = ['finca']

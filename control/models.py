@@ -28,13 +28,13 @@ class Muestreo(models.Model):
                                              validators=[MinValueValidator(0.0)])
     observaciones = models.TextField(blank=True, null=True)
     # ---- congelar resultados
-    b = models.DecimalField('biomasa', max_digits=5, decimal_places=1, validators=[MinValueValidator(0.0)],
+    b = models.DecimalField('biomasa', max_digits=7, decimal_places=2, validators=[MinValueValidator(0.0)],
                             blank=True, null=True)
-    a_d = models.DecimalField('ajuste dieta kg', max_digits=5, decimal_places=1, validators=[MinValueValidator(0.0)],
+    a_d = models.DecimalField('ajuste dieta kg', max_digits=7, decimal_places=2, validators=[MinValueValidator(0.0)],
                               blank=True, null=True)
-    g_d_p = models.DecimalField('ganancia diaria peso', max_digits=5, decimal_places=1,
+    g_d_p = models.DecimalField('ganancia diaria peso', max_digits=7, decimal_places=2,
                                 validators=[MinValueValidator(0.0)], blank=True, null=True)
-    f_c_a = models.DecimalField('factor conversion alimenticia', max_digits=5, decimal_places=1,
+    f_c_a = models.DecimalField('factor conversion alimenticia', max_digits=7, decimal_places=2,
                                validators=[MinValueValidator(0.0)], blank=True, null=True)
     # ----
     cultivo = models.ForeignKey(Cultivo, on_delete=models.CASCADE)
@@ -52,22 +52,26 @@ class Muestreo(models.Model):
             peso_anterior = self.cultivo.peso_pez_gr
         else:
             peso_anterior = ultimo_muestreo.peso_promedio_gr
+        print('peso anterior', peso_anterior)
         return peso_anterior
 
     def biomasa(self):
-        biomasa = (self.cultivo.total_peces() * self.peso_anterior()) / 1000  # Kg
+        total_peces = self.cultivo.total_peces()
+        peso_anterior = self.peso_anterior()
+        biomasa = (total_peces * peso_anterior) / 1000  # Kg
+        print('total peces', total_peces)
+        print('biomasa', biomasa)
         return biomasa
 
     def ajuste_dieta(self):
         ajuste_dieta = self.biomasa() * (self.valor_ajuste_tabla / 100)
-        print('biomasa', self.biomasa)
-        print('peso anterior', self.peso_anterior)
         print('ajuste_dieta', ajuste_dieta)
         return ajuste_dieta
 
     def fecha_ultimo_muestreo(self):
+        print('self fecha', self.fecha_registro)
         ultimo_muestreo = Muestreo.objects.filter(cultivo=self.cultivo, fecha_registro__lt=self.fecha_registro).last()
-        print('ultimo_muestreo', ultimo_muestreo)
+        print('ultimo_muestreo filter', ultimo_muestreo)
         if ultimo_muestreo is None:
             fecha_ultimo_muestreo = self.cultivo.fecha_registro
         else:
@@ -76,7 +80,7 @@ class Muestreo(models.Model):
         return fecha_ultimo_muestreo
 
     def delta_fecha(self):
-        delta_fecha = self.fecha_registro.date() - self.fecha_ultimo_muestreo().date()
+        delta_fecha = self.fecha_registro - self.fecha_ultimo_muestreo()
         delta_fecha = delta_fecha.days
         print('delta_fecha', delta_fecha)
         return delta_fecha
@@ -95,9 +99,8 @@ class Muestreo(models.Model):
         return ganancia_diaria_peso
 
     def factor_conversion_alimenticia(self):
-        factor_conversion_alimenticia = Alimentacion.alimento_suministrado(self.cultivo,
-                                                                           self.fecha_ultimo_muestreo()) / \
-                                        float(self.delta_peso())
+        alimento_utilizado = Alimentacion.alimento_suministrado(self.cultivo, self.fecha_ultimo_muestreo())
+        factor_conversion_alimenticia = alimento_utilizado / float(self.delta_peso())
         print('factor de conversion alimenticia:', factor_conversion_alimenticia)
         return factor_conversion_alimenticia
 
@@ -228,8 +231,8 @@ class Calidad_agua(models.Model):
 
 
 class Rangos_calidad_agua(models.Model):
-    max_oxigeno = models.DecimalField('Oxígeno', max_digits=5, decimal_places=2, validators=[MinValueValidator(0.00)])
-    min_oxigeno = models.DecimalField('Oxígeno', max_digits=5, decimal_places=2, validators=[MinValueValidator(0.00)])
+    max_oxigeno = models.DecimalField(max_digits=5, decimal_places=2, validators=[MinValueValidator(0.00)])
+    min_oxigeno = models.DecimalField(max_digits=5, decimal_places=2, validators=[MinValueValidator(0.00)])
     max_temperatura = models.PositiveSmallIntegerField(validators=[MinValueValidator(-10), MaxValueValidator(100)])
     min_temperatura = models.PositiveSmallIntegerField(validators=[MinValueValidator(-10), MaxValueValidator(100)])
     max_ph = models.PositiveSmallIntegerField(validators=[MinValueValidator(0), MaxValueValidator(14)])

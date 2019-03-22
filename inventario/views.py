@@ -57,8 +57,12 @@ def compra_bultos_create(request):
 @login_required
 def compra_bultos_list(request):
     concentrado_comprado = CompradeBultos.objects.filter(finca=request.user.profile.trabaja_en)
+    total = 0
+    for compra in concentrado_comprado:
+        total += compra.total_compra()
     context = {
-        'concentrado_comprado': concentrado_comprado
+        'concentrado_comprado': concentrado_comprado,
+        'total': total
     }
     return render(request, 'inventario/compra_bultos_list.html', context)
 

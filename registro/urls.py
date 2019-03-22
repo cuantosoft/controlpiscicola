@@ -15,4 +15,5 @@ urlpatterns = [
     path('cultivos/crear/',cultivo_crear, name='cultivo_crear'),
     path('cultivos/<int:cultivo_id>/',cultivo_detalle, name='cultivo_detalle'),
     path('cultivos/<int:cultivo_id>/editar/', cultivo_editar, name='cultivo_editar'),
+    path('cultivos/<int:cultivo_id>/cosechar/', cultivo_cosechar, name='cultivo_cosechar'),
 ]

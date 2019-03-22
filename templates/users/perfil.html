@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-{% load crispy_forms_tags %}
-{% load static %}
+{#{% load crispy_forms_tags %}#}
+
 {% block title %}
     Mi perfil
 {% endblock %}
@@ -11,24 +11,37 @@
 
 {% block micontenido %}
     {% if la_piscicola %}
-        <h4>{{ la_piscicola.razon_social }}</h4>
+        <div class="row valign-wrapper">
+        <div class="col m6 s12">
+            <h4 class="left">finca: {{ la_piscicola.razon_social }}</h4>
+        </div>
+        <div class="col m6 s12">
+            <a href="{% url 'control:calidad_agua_rangos_create' %}"
+               class="btn btn-large btn-flat waves-effect waves-light right nowrap">
+            rangos calidad agua
+            </a>
+        </div>
+        </div>
+
     {% else %}
         No has configurado una finca, comunícate con el administrador
     {% endif %}
     <div class="section" >
-        <i class="left"><img class="responsive-img circle small" src="{{ user.profile.image.url }}" height="80" width="80"></i>
-        <h5 class="valign-wrapper">{{ user.username }}</h5>
+        <i class="left"><img class="responsive-img circle small" src="{{ user.profile.image.url }}"
+                             height="80" width="80" alt=""></i>
+        <h5 class="valign-wrapper">username: {{ user.username }}</h5>
     </div>
 
         <p>nombre: {{ user.firstname }}</p>
         <p>apellidos: {{ user.lastname}}</p>
-        <p>cargo: {{ user.groups.all.0 }}</p>
+{#        <p>cargo: {{ user.groups.all.0 }}</p>#}
+        <p> cargo: {% if user.profile.rol == 1 %} Administrador {% else %} Trabajador {% endif %}</p>
         <p>email: </p>{{ user.email }}
 
-        {% ifequal user.groups.all.0.name "Jefe" %}
-        {% else %}
-            <p>Ultima conexión: {{ user.last_login }}</p>
-        {% endifequal %}
+{#        {% ifequal user.groups.all.0.name "Jefe" %}#}
+{#        {% else %}#}
+        <p>Ultima conexión: {{ user.last_login }}</p>
+{#        {% endifequal %}#}
     <br>
 {#    <div class="row">#}
 {#        <div class="col s12 m6 l6">#}

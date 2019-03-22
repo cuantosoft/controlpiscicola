@@ -16,17 +16,17 @@
 
     {% if cosechas %}
         <div class="row center">
-            <span class="">total cosechas: {{ cosechas|length }}</span>
+            <small class="orange-text text-accent-2">total cosechas: {{ cosechas|length }}</small>
         </div>
 
         <div class="row">
-            <div class="col s12 m8 offset-m2">
+            <div class="col s12 m10 offset-m1">
             <table class="striped">
                 <thead>
                 <tr>
                     <th>Nombre:</th>
                     <th>fecha cosecha:</th>
-                    <th>total producción:</th>
+                    <th>numero de peces:</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -34,7 +34,7 @@
                 <tr>
                     <td>{{ cosecha.nombre}}</td>
                     <td>{{ cosecha.fecha_cosecha}}</td>
-                    <td></td>
+                    <td>{{ cosecha.total_peces }}</td>
                 </tr>
                 {% empty %}
                     <p class="center">No se han registrado muestreos</p>

@@ -13,6 +13,9 @@
 {% endblock %}
 
 {% block micontenido %}
+    <div class="row center">
+        <small class="orange-text text-accent-2">total: ${{ total }}</small>
+    </div>
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <table class="striped">
@@ -22,7 +25,8 @@
                     <th>Fecha</th>
                     <th>tipo</th>
                     <th>bultos</th>
-                    <th>precio</th>
+                    <th>$ precio</th>
+                    <th>$ total</th>
                 </tr>
                 </thead>
 
@@ -33,6 +37,7 @@
                         <td>{{ compra.concentrado }}</td>
                         <td>{{ compra.numero_bultos }}</td>
                         <td>{{ compra.precio_unidad }}</td>
+                        <td>{{ compra.total_compra }}</td>
                     </tr>
                 {% empty %}
                     <div class="center">

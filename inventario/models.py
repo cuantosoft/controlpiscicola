@@ -34,3 +34,6 @@ class CompradeBultos(models.Model):
 
     def __str__(self):
         return "bultos {}".format(self.concentrado)
+
+    def total_compra(self):
+        return self.numero_bultos * self.precio_unidad

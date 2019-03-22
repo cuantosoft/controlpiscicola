@@ -86,7 +86,14 @@
                 </tbody>
             </table>
             <br>
-            <a class="btn btn-large btn-flat waves-effect right" href="{% url 'cultivo_editar' cultivo.id %}">Editar</a>
+            <a class="btn btn-large btn-flat waves-effect right" href="{% url 'cultivo_editar' cultivo.id %}">
+                <i class="material-icons right">create</i>
+                Editar
+            </a>
+            <a class="btn btn-large btn-flat waves-effect left" href="{% url 'cultivo_cosechar' cultivo.id %}">
+                <i class="material-icons left">thumb_up</i>
+                Cocechar
+            </a>
         </div>
     </div>
 

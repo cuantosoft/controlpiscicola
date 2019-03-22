@@ -4,6 +4,7 @@ from datetime import datetime
 import pytz
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+import decimal
 
 
 @login_required
@@ -24,6 +25,7 @@ def muestreo_registrar(request, cultivo_id):
     if request.method == 'POST':
         form = MuestreoForm(request.POST)
         if form.is_valid():
+            peso = form.cleaned_data['peso_promedio_gr']
             muestreo = form.save(commit=False)
             muestreo.cultivo = cultivo
             muestreo.responsable = request.user
@@ -33,7 +35,7 @@ def muestreo_registrar(request, cultivo_id):
             # muestreo.f_c_a#  = muestreo.factor_conversion_alimenticia()
             muestreo.save()
             # http://documentacion.ideam.gov.co/openbiblio/bvirtual/001819/Winisis/Pagina/ord_cont10.htm
-            peso = form.cleaned_data['peso_promedio_gr']
+
             if 40 < peso < 120:
                 cultivo.etapa = "levante"
                 cultivo.save()
@@ -48,6 +50,14 @@ def muestreo_registrar(request, cultivo_id):
     }
     return render(request, 'control/muestreo_registrar.html', context)
 
+
+@login_required
+def muestreo_detalle(request, cultivo_id, muestreo_id):
+    muestreo = get_object_or_404(Muestreo, pk=muestreo_id, cultivo=cultivo_id)
+    context = {
+        'muestreo': muestreo
+    }
+    return render(request, 'control/muestreo_detalle.html', context)
 
 @login_required
 def muestreo_editar(request, cultivo_id, muestreo_id):
@@ -130,7 +140,7 @@ def alimentacion_registrar(request, cultivo_id):  # ración
             f.alimentacion = alimentacion
             f.save()
             concentrado = Concentrado.objects.get(finca=cultivo.finca, nombre=tipo_concentrado)
-            concentrado.total_kg = concentrado.total_kg - (cantidad_gr/1000)
+            concentrado.total_kg = concentrado.total_kg - decimal.Decimal(cantidad_gr/1000)
             concentrado.save()
             messages.info(request, 'ración registrada.')
             return redirect('cultivo_list')
@@ -238,3 +248,23 @@ def graficas_agua(request, estanque_id):
         "ph": ph,
     }
     return render(request, 'control/graficas_agua.html', context)
+
+
+@login_required
+def calidad_agua_rangos_create(request):
+    finca = request.user.profile.trabaja_en
+    rangos = Rangos_calidad_agua.objects.filter(finca=finca).first()
+    if rangos:
+        form = CalidadAguaRangosForm(request.POST or None, instance=rangos)
+    else:
+        form = CalidadAguaRangosForm(request.POST or None)
+    if request.method == 'POST':
+        if form.is_valid():
+            if rangos:
+                form.save()
+            else:
+                rango = form.save(commit=False)
+                rango.finca = finca
+                rango.save()
+            return redirect('estanque_list')
+    return render(request, 'control/calidad_agua_rangos.html', {'form': form})

@@ -7,7 +7,7 @@ from django.views.generic import ListView,CreateView
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-
+from datetime import datetime
 
 @login_required
 def la_piscicola(request):  # página inicial logeado
@@ -22,7 +22,7 @@ def la_piscicola(request):  # página inicial logeado
     context = {
         'la_piscicola': la_piscicola_obj
     }
-    return render(request,'registro/la_piscicola.html', context)
+    return render(request, 'registro/la_piscicola.html', context)
 
 # ----estanque views----------------------------------------------------------------------------------------------------
 @login_required
@@ -118,7 +118,7 @@ def cultivo_crear(request):
         if form.is_valid():
             cultivo = form.save(commit=False)
             cultivo.finca = request.user.profile.trabaja_en
-            cultivo.responsable = request.user.name
+            cultivo.responsable = request.user
             peso = form.cleaned_data['peso_pez_gr']
             if 40 < peso < 120:
                 cultivo.etapa = "levante"
@@ -142,7 +142,7 @@ def cultivo_detalle(request, cultivo_id):
         cultivo = Cultivo.objects.get(pk=cultivo_id)
     except Cultivo.DoesNotExist:
         raise Http404("no existe ese cultivo")
-    return render(request,'registro/cultivo_detalle.html', {'cultivo': cultivo})
+    return render(request, 'registro/cultivo_detalle.html', {'cultivo': cultivo})
 
 
 @login_required
@@ -190,4 +190,20 @@ def cosecha_list(request):
         'cosechas': lista,
         'mensaje': mensaje
     }
-    return render(request, 'registro/cultivo_list.html', context)
+    return render(request, 'registro/cosecha_list.html', context)
+
+
+def cultivo_cosechar(request, cultivo_id):
+    cultivo = Cultivo.objects.get(pk=cultivo_id)
+    if request.method == 'POST':
+        cultivo.cosechado = True
+        cultivo.fecha_cosecha = datetime.now()
+        cultivo.save()
+        return redirect('cosecha_list')
+    context = {
+        'cultivo': cultivo,
+    }
+    return render(request, 'registro/cultivo_cosechar.html', context)
+
+
+

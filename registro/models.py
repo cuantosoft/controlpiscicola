@@ -24,9 +24,9 @@ class Finca(models.Model):
 class Estanque(models.Model):
     nombre = models.CharField(max_length=100)
     tipo = models.CharField(max_length=100)
-    nivel_agua_mts = models.DecimalField(default=0.0, max_digits=5, decimal_places=2,
+    nivel_agua_mts = models.DecimalField(max_digits=5, decimal_places=2,
                                          validators=[MinValueValidator(0)])
-    mts_2 = models.DecimalField(default=0.0, max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
+    mts_2 = models.DecimalField(max_digits=5, decimal_places=2, validators=[MinValueValidator(0)])
     detalle = models.TextField(blank=True, null=True)
     # --------------------------------------------------------------------------------------
     finca = models.ForeignKey(Finca, on_delete=models.CASCADE, blank=True)
